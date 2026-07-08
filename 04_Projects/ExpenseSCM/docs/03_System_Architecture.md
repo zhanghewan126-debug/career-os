@@ -34,63 +34,9 @@ ExpenseSCM 采用企业内部系统常见的分层架构：
 
 
 
-```mermaid
-
-flowchart TD
-
-&#x20;   A\[User Browser] --> B\[Frontend Layer<br/>EasyUI / Jinja2 / Vue]
-
-&#x20;   B --> C\[Backend Layer<br/>Python / Flask]
-
-&#x20;   C --> D\[Business Layer<br/>Expense Modules / Workflow]
-
-&#x20;   D --> E\[Data Access Layer<br/>SQL / PL/SQL Package]
-
-&#x20;   E --> F\[(Oracle Database)]
-
-&#x20;   E --> G\[(MongoDB Attachments)]
-
-&#x20;   E --> H\[(Oracle EBS via DB Link)]
-
-```
-
-
-
-\---
-
-
 
 \# 3. Core Module Architecture
 
-
-
-```mermaid
-
-flowchart LR
-
-&#x20;   PR\[PR<br/>请购] --> PPR\[PPR<br/>采购准备]
-
-&#x20;   PPR --> PO\[PO<br/>采购订单]
-
-&#x20;   PO --> RCV\[Receiving<br/>验收]
-
-&#x20;   RCV --> INV\[Inventory<br/>库存]
-
-&#x20;   INV --> ISSUE\[Issue<br/>领用]
-
-&#x20;   ISSUE --> COST\[Cost<br/>成本核算]
-
-
-
-&#x20;   WF\[Workflow<br/>审批流] -.-> PR
-
-&#x20;   WF -.-> PPR
-
-&#x20;   WF -.-> RCV
-
-&#x20;   WF -.-> ISSUE
-
-```
 
 
 
@@ -99,30 +45,6 @@ flowchart LR
 
 
 \# 4. Data Flow Architecture
-
-
-
-```mermaid
-
-flowchart TD
-
-&#x20;   A\[PR 请购单] --> B\[Expense PO Prepare]
-
-&#x20;   B --> C\[PO Headers / Lines / Locations]
-
-&#x20;   C --> D\[Receiving Transactions]
-
-&#x20;   D --> E\[Material Transactions]
-
-&#x20;   E --> F\[OnHand Quantity]
-
-&#x20;   F --> G\[Supply Layer]
-
-&#x20;   G --> H\[Issue / Return]
-
-&#x20;   H --> I\[Period Cost]
-
-```
 
 
 
