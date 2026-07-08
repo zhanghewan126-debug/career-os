@@ -84,6 +84,8 @@ PR → PPR → PO → Receiving → Inventory → Issue → Cost
 
 业务单据不会只依赖页面状态，而是通过审批节点推动业务进入下一阶段。
 
+![Workflow Diagram](../images/workflow.svg)
+
 ### 5.4 Supply Layer Design
 
 Supply Layer 用于记录物料在不同供应链节点中的状态：

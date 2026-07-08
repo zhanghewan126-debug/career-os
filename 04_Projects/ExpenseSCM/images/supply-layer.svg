@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="600" viewBox="0 0 1240 600" font-family="'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b85450"/>
+    </marker>
+    <marker id="open" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1,1 L9,5 L1,9" fill="none" stroke="#777777" stroke-width="1.3"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1240" height="600" fill="#ffffff"/>
+  <text x="60" y="32" font-size="18" font-weight="bold" fill="#333333">ExpenseSCM Supply Layer｜七层供需模型（EXP_MTL_SUPPLY）</text>
+
+  <!-- in-transit group -->
+  <rect x="55" y="85" width="830" height="150" rx="8" fill="none" stroke="#999999" stroke-dasharray="6,4"/>
+  <text x="67" y="103" font-size="11" font-weight="bold" fill="#999999">在途供应 In-Transit Supply</text>
+
+  <!-- flow edges -->
+  <g stroke="#555555" stroke-width="1.5" fill="none">
+    <path d="M20,165 L70,165" marker-end="url(#arrow)"/>
+    <path d="M215,165 L240,165" marker-end="url(#arrow)"/>
+    <path d="M385,165 L410,165" marker-end="url(#arrow)"/>
+    <path d="M555,165 L580,165" marker-end="url(#arrow)"/>
+    <path d="M725,165 L750,165" marker-end="url(#arrow)"/>
+    <path d="M895,165 L920,165" marker-end="url(#arrow)"/>
+    <path d="M1065,165 L1105,165" marker-end="url(#arrow)"/>
+    <path d="M1065,330 L1105,330" marker-end="url(#arrow)"/>
+  </g>
+  <path d="M992,210 L992,290" fill="none" stroke="#b85450" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+  <path d="M518,420 L518,395 L992,395 L992,370" fill="none" stroke="#777777" stroke-width="1.3" stroke-dasharray="5,4" marker-start="url(#open)" marker-end="url(#open)"/>
+
+  <!-- edge labels -->
+  <g font-size="9" fill="#444444" paint-order="stroke" stroke="#ffffff" stroke-width="3">
+    <text x="44" y="157" text-anchor="middle">请购单核准</text>
+    <text x="227" y="150" text-anchor="middle">转采购</text>
+    <text x="227" y="161" text-anchor="middle">准备</text>
+    <text x="397" y="150" text-anchor="middle">PO</text>
+    <text x="397" y="161" text-anchor="middle">核准</text>
+    <text x="567" y="150" text-anchor="middle">供应商</text>
+    <text x="567" y="161" text-anchor="middle">送货</text>
+    <text x="737" y="150" text-anchor="middle">检验</text>
+    <text x="737" y="161" text-anchor="middle">合格</text>
+    <text x="907" y="150" text-anchor="middle">入库</text>
+    <text x="907" y="161" text-anchor="middle">过账</text>
+    <text x="1085" y="157" text-anchor="middle">领用核准发料</text>
+    <text x="1085" y="322" text-anchor="middle">退厂完成</text>
+    <text x="1000" y="252" fill="#b85450">验退单（品质不合格）</text>
+    <text x="755" y="391">供需匹配</text>
+  </g>
+
+  <!-- 7 layer boxes -->
+  <g font-size="11" text-anchor="middle">
+    <rect x="70" y="120" width="145" height="90" rx="6" fill="#fff2e6" stroke="#d79b00"/>
+    <text x="142" y="158" font-weight="bold" fill="#333333">PR</text>
+    <text x="142" y="178" font-size="10" fill="#555555">已请购未转采购</text>
+
+    <rect x="240" y="120" width="145" height="90" rx="6" fill="#ffedd9" stroke="#d79b00"/>
+    <text x="312" y="158" font-weight="bold" fill="#333333">PPR</text>
+    <text x="312" y="178" font-size="10" fill="#555555">采购准备中</text>
+
+    <rect x="410" y="120" width="145" height="90" rx="6" fill="#ffe6cc" stroke="#d79b00"/>
+    <text x="482" y="158" font-weight="bold" fill="#333333">PO</text>
+    <text x="482" y="178" font-size="10" fill="#555555">已下单未到货（在途）</text>
+
+    <rect x="580" y="120" width="145" height="90" rx="6" fill="#ffdfbf" stroke="#d79b00"/>
+    <text x="652" y="158" font-weight="bold" fill="#333333">RECEIVING</text>
+    <text x="652" y="178" font-size="10" fill="#555555">已到货检验中</text>
+
+    <rect x="750" y="120" width="145" height="90" rx="6" fill="#ffd9b3" stroke="#d79b00"/>
+    <text x="822" y="158" font-weight="bold" fill="#333333">ACCEPT</text>
+    <text x="822" y="178" font-size="10" fill="#555555">检验合格待入库</text>
+
+    <rect x="920" y="120" width="145" height="90" rx="6" fill="#ffcc99" stroke="#b36b00" stroke-width="1.6"/>
+    <text x="992" y="158" font-weight="bold" fill="#333333">ONHAND</text>
+    <text x="992" y="178" font-size="10" fill="#555555">在库可用</text>
+
+    <rect x="920" y="290" width="145" height="80" rx="6" fill="#f8cecc" stroke="#b85450"/>
+    <text x="992" y="324" font-weight="bold" fill="#333333">RETURN</text>
+    <text x="992" y="344" font-size="10" fill="#555555">验退处理中</text>
+  </g>
+
+  <!-- terminators -->
+  <rect x="1105" y="135" width="120" height="60" rx="6" fill="#f5f5f5" stroke="#666666" stroke-dasharray="4,3"/>
+  <text x="1165" y="161" font-size="10" text-anchor="middle" fill="#333333">领用出库</text>
+  <text x="1165" y="176" font-size="9" text-anchor="middle" fill="#666666">（消耗，离开供应层）</text>
+
+  <rect x="1105" y="300" width="120" height="60" rx="6" fill="#f5f5f5" stroke="#666666" stroke-dasharray="4,3"/>
+  <text x="1165" y="326" font-size="10" text-anchor="middle" fill="#333333">退回供应商</text>
+  <text x="1165" y="341" font-size="9" text-anchor="middle" fill="#666666">（冲减库存与成本）</text>
+
+  <!-- demand layer -->
+  <rect x="70" y="420" width="560" height="80" rx="6" fill="#dae8fc" stroke="#6c8ebf"/>
+  <text x="350" y="453" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#333333">Demand Layer（EXP_MTL_DEMAND）</text>
+  <text x="350" y="475" font-size="10" text-anchor="middle" fill="#555555">已核准未发料的开放需求（领用预约占用可用量）</text>
+
+  <!-- formula -->
+  <rect x="670" y="420" width="555" height="80" rx="6" fill="#f5f5f5" stroke="#666666"/>
+  <text x="684" y="448" font-size="11" font-weight="bold" fill="#333333">可用量 ＝ ONHAND ＋ 在途供应（PR＋PPR＋PO＋RECEIVING＋ACCEPT）</text>
+  <text x="684" y="464" font-size="11" font-weight="bold" fill="#333333">　　　　－ 开放需求（Demand）</text>
+  <text x="684" y="486" font-size="9.5" fill="#666666">请购与领用校验均基于可用量，从数据模型层面抑制重复采购与库存超发</text>
+
+  <text x="70" y="545" font-size="9.5" fill="#666666">数量守恒：业务每推进一个节点，数量从上一层扣减、在下一层增加（supply_type_code 流转），整条供应链数量可交叉对账。</text>
+</svg>

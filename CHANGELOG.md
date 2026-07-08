@@ -4,6 +4,19 @@ All notable changes to CareerOS will be documented here.
 
 ---
 
+## v0.3.0 - 2026-07-08
+
+### Added
+
+- 完成 ExpenseSCM 四张核心流程图（drawio + SVG 双格式）：
+  - Workflow Diagram：audit_order_id 审批状态机与审批流驱动的业务流转
+  - Supply Layer Diagram：七层供需模型、在途供应与可用量公式
+  - Inventory Flow Diagram：四类库存事务、PL/SQL Package 事务封装与三表协同
+  - Cost Flow Diagram：月度加权平均公式、期间滚动结转与月结流程
+- 四张流程图分别嵌入系统架构与数据库设计文档对应章节
+
+---
+
 ## v0.2.0 - 2026-07-08
 
 ### Added

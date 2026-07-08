@@ -55,10 +55,10 @@
 
 - [x] Database Design
 - [x] Database ER Diagram
-- [ ] Workflow Diagram
-- [ ] Supply Layer Diagram
-- [ ] Inventory Flow Diagram
-- [ ] Cost Flow Diagram
+- [x] Workflow Diagram
+- [x] Supply Layer Diagram
+- [x] Inventory Flow Diagram
+- [x] Cost Flow Diagram
 - [ ] README（GitHub 首页优化）
 
 ### Phase 3：Interview Preparation
@@ -82,26 +82,28 @@
 
 ## 🗂 Current Milestone
 
-**Milestone 3：Database Design 与图纸**
+**Milestone 4：核心流程图**
 
 当前任务：
 
-- [x] 完成 Database Design
-- [x] 绘制 Database ER Diagram（database-er.drawio / database-er.svg）
+- [x] Workflow Diagram（workflow.drawio / workflow.svg）
+- [x] Supply Layer Diagram（supply-layer.drawio / supply-layer.svg）
+- [x] Inventory Flow Diagram（inventory-flow.drawio / inventory-flow.svg）
+- [x] Cost Flow Diagram（cost-flow.drawio / cost-flow.svg）
 - [ ] 优化 README
 
 ---
 
 ## 🚀 Next Milestone
 
-**Milestone 4：核心流程图**
+**Milestone 5：Interview Preparation**
 
 完成：
 
-- Workflow Diagram
-- Supply Layer Diagram
-- Inventory Flow Diagram
-- Cost Flow Diagram
+- Technical Highlights
+- STAR Interview
+- Interview Q&A
+- Resume Bullets
 
 ---
 
@@ -127,7 +129,8 @@
 | v0.2 | 完成 Project Overview |
 | v0.3 | 完成 Business Process |
 | v0.4 | 完成 System Architecture 与 Architecture Diagram |
-| v0.5 | 完成 Database Design 文档 |
+| v0.5 | 完成 Database Design 文档与 ER Diagram |
+| v0.6 | 完成 Workflow / Supply Layer / Inventory Flow / Cost Flow 四张核心流程图 |
 
 ---
 

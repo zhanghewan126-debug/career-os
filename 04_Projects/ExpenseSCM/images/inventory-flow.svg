@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="700" viewBox="0 0 1160 700" font-family="'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1160" height="700" fill="#ffffff"/>
+  <text x="60" y="32" font-size="18" font-weight="bold" fill="#333333">ExpenseSCM Inventory Flow｜库存事务与三表协同</text>
+
+  <!-- edges: sources -> package -->
+  <g stroke="#555555" stroke-width="1.5" fill="none">
+    <path d="M160,140 L160,185 L400,185 L400,210" marker-end="url(#arrow)"/>
+    <path d="M440,140 L440,167 L520,167 L520,210" marker-end="url(#arrow)"/>
+    <path d="M720,140 L720,167 L640,167 L640,210" marker-end="url(#arrow)"/>
+    <path d="M1000,140 L1000,185 L760,185 L760,210" marker-end="url(#arrow)"/>
+  </g>
+  <!-- edges: package -> tables -->
+  <g stroke="#555555" stroke-width="1.5" fill="none">
+    <path d="M480,360 L480,400 L210,400 L210,440" marker-end="url(#arrow)"/>
+    <path d="M580,360 L580,440" marker-end="url(#arrow)"/>
+    <path d="M680,360 L680,400 L950,400 L950,440" marker-end="url(#arrow)"/>
+  </g>
+  <!-- edge: trans table -> cost -->
+  <path d="M330,550 L330,572 L960,572 L960,590" fill="none" stroke="#777777" stroke-width="1.3" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+
+  <g font-size="10" fill="#444444" paint-order="stroke" stroke="#ffffff" stroke-width="3">
+    <text x="580" y="392" text-anchor="middle">同一事务内同步更新三表</text>
+  </g>
+
+  <!-- source boxes -->
+  <rect x="60" y="70" width="200" height="70" rx="6" fill="#d5e8d4" stroke="#82b366"/>
+  <text x="160" y="100" font-size="11" font-weight="bold" text-anchor="middle" fill="#333333">验收入库（DELIVER）＋</text>
+  <text x="160" y="120" font-size="9.5" text-anchor="middle" fill="#555555">触发单据：验收单</text>
+
+  <rect x="340" y="70" width="200" height="70" rx="6" fill="#dae8fc" stroke="#6c8ebf"/>
+  <text x="440" y="100" font-size="11" font-weight="bold" text-anchor="middle" fill="#333333">领用发料（ISSUE）－</text>
+  <text x="440" y="120" font-size="9.5" text-anchor="middle" fill="#555555">触发单据：领用单</text>
+
+  <rect x="620" y="70" width="200" height="70" rx="6" fill="#dae8fc" stroke="#6c8ebf"/>
+  <text x="720" y="100" font-size="11" font-weight="bold" text-anchor="middle" fill="#333333">退料入库（RETURN IN）＋</text>
+  <text x="720" y="120" font-size="9.5" text-anchor="middle" fill="#555555">触发单据：退料单</text>
+
+  <rect x="900" y="70" width="200" height="70" rx="6" fill="#f8cecc" stroke="#b85450"/>
+  <text x="1000" y="100" font-size="11" font-weight="bold" text-anchor="middle" fill="#333333">验退出库（RTV）－</text>
+  <text x="1000" y="120" font-size="9.5" text-anchor="middle" fill="#555555">触发单据：验退单</text>
+
+  <!-- package -->
+  <rect x="280" y="210" width="600" height="150" rx="6" fill="#fff2cc" stroke="#d6b656"/>
+  <text x="580" y="236" font-size="12" font-weight="bold" text-anchor="middle" fill="#333333">Oracle PL/SQL Package（单一数据库事务）</text>
+  <g font-size="9" text-anchor="middle" fill="#333333">
+    <rect x="300" y="270" width="100" height="50" rx="5" fill="#ffffff" stroke="#d6b656"/>
+    <text x="350" y="291">单据状态</text>
+    <text x="350" y="303">校验</text>
+    <rect x="410" y="270" width="100" height="50" rx="5" fill="#ffffff" stroke="#d6b656"/>
+    <text x="460" y="291">SELECT</text>
+    <text x="460" y="303">FOR UPDATE 行锁</text>
+    <rect x="520" y="270" width="100" height="50" rx="5" fill="#ffffff" stroke="#d6b656"/>
+    <text x="570" y="291">幂等键校验</text>
+    <text x="570" y="303">source + type</text>
+    <rect x="630" y="270" width="100" height="50" rx="5" fill="#ffffff" stroke="#d6b656"/>
+    <text x="680" y="291">过账写入</text>
+    <text x="680" y="303">（三表联动）</text>
+    <rect x="740" y="270" width="100" height="50" rx="5" fill="#ffffff" stroke="#d6b656"/>
+    <text x="790" y="291">SAVEPOINT</text>
+    <text x="790" y="303">回滚 / COMMIT</text>
+  </g>
+  <g stroke="#555555" stroke-width="1.2" fill="none">
+    <path d="M400,295 L410,295" marker-end="url(#arrow)"/>
+    <path d="M510,295 L520,295" marker-end="url(#arrow)"/>
+    <path d="M620,295 L630,295" marker-end="url(#arrow)"/>
+    <path d="M730,295 L740,295" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- three tables -->
+  <rect x="60" y="440" width="300" height="110" rx="6" fill="#ffe6cc" stroke="#d79b00"/>
+  <text x="210" y="472" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#333333">EXP_MTL_MATERIAL_TRANS</text>
+  <text x="210" y="494" font-size="10" text-anchor="middle" fill="#555555">事务流水 · 只增不改</text>
+  <text x="210" y="512" font-size="10" text-anchor="middle" fill="#555555">记录单据、类型、数量±、成本、期间</text>
+
+  <rect x="430" y="440" width="300" height="110" rx="6" fill="#ffe6cc" stroke="#d79b00"/>
+  <text x="580" y="472" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#333333">EXP_MTL_ONHAND_QTY_DETAIL</text>
+  <text x="580" y="494" font-size="10" text-anchor="middle" fill="#555555">批次在库数量</text>
+  <text x="580" y="512" font-size="10" text-anchor="middle" fill="#555555">按 receipt_date FIFO 扣减 remain_quantity</text>
+
+  <rect x="800" y="440" width="300" height="110" rx="6" fill="#ffe6cc" stroke="#d79b00"/>
+  <text x="950" y="472" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#333333">EXP_MTL_SUPPLY</text>
+  <text x="950" y="494" font-size="10" text-anchor="middle" fill="#555555">供应层状态</text>
+  <text x="950" y="512" font-size="10" text-anchor="middle" fill="#555555">ONHAND 层数量同步增减</text>
+
+  <!-- reconciliation -->
+  <rect x="60" y="590" width="700" height="70" rx="6" fill="#f5f5f5" stroke="#666666"/>
+  <text x="74" y="618" font-size="11" font-weight="bold" fill="#333333">对账恒等：Σ 在库明细 remain_quantity ＝ 事务表净额 ＝ Supply Layer ONHAND 层数量</text>
+  <text x="74" y="640" font-size="9.5" fill="#666666">任意时点三个视图可交叉对账，库存差异可定位到单笔事务</text>
+
+  <rect x="820" y="590" width="280" height="70" rx="6" fill="#e1d5e7" stroke="#9673a6"/>
+  <text x="960" y="618" font-size="10" text-anchor="middle" fill="#333333">入库 / 验退金额按期间汇总</text>
+  <text x="960" y="636" font-size="10" text-anchor="middle" fill="#333333">→ ITEM_PERIOD_COST（见 Cost Flow）</text>
+</svg>

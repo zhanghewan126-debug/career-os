@@ -110,8 +110,10 @@ ExpenseSCM
 - ✅ 系统架构图
 - ✅ 数据库设计
 - ✅ ER 图
-- ⏳ Workflow 流程图
-- ⏳ Supply Layer 图
+- ✅ Workflow 流程图
+- ✅ Supply Layer 图
+- ✅ Inventory Flow 图
+- ✅ Cost Flow 图
 - ⏳ 技术亮点整理
 - ⏳ STAR 面试案例
 - ⏳ 面试问答

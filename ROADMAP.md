@@ -9,7 +9,7 @@
 - [x] Architecture
 - [x] Database Design
 - [x] ER Diagram
-- [ ] Workflow
+- [x] Workflow
 - [ ] STAR
 
 ---

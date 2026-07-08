@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="680" viewBox="0 0 1160 680" font-family="'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b85450"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1160" height="680" fill="#ffffff"/>
+  <text x="60" y="32" font-size="18" font-weight="bold" fill="#333333">ExpenseSCM Workflow Diagram｜审批流驱动业务流转</text>
+
+  <!-- ===== Section A: 状态机 ===== -->
+  <rect x="40" y="60" width="1080" height="330" rx="8" fill="none" stroke="#6c8ebf" stroke-dasharray="6,4"/>
+  <text x="52" y="80" font-size="12" font-weight="bold" fill="#6c8ebf">① 单据审批状态机（audit_order_id 驱动）</text>
+
+  <!-- edges -->
+  <g stroke="#555555" stroke-width="1.5" fill="none">
+    <path d="M190,165 L250,165" marker-end="url(#arrow)"/>
+    <path d="M730,165 L790,165" marker-end="url(#arrow)"/>
+    <path d="M910,165 L960,165" marker-end="url(#arrow)"/>
+    <path d="M490,280 L490,343 L430,343" marker-end="url(#arrow)"/>
+    <path d="M250,343 L130,343 L130,190" marker-end="url(#arrow)"/>
+  </g>
+  <g font-size="10" fill="#444444" paint-order="stroke" stroke="#ffffff" stroke-width="3">
+    <text x="220" y="158" text-anchor="middle">提交</text>
+    <text x="760" y="158" text-anchor="middle">全部节点通过</text>
+    <text x="497" y="318">任一节点驳回</text>
+    <text x="140" y="336">修改后重新提交</text>
+  </g>
+
+  <!-- draft -->
+  <rect x="70" y="140" width="120" height="50" rx="6" fill="#f5f5f5" stroke="#666666"/>
+  <text x="130" y="161" font-size="11" text-anchor="middle" fill="#333333">草稿</text>
+  <text x="130" y="177" font-size="10" text-anchor="middle" fill="#666666">Draft</text>
+
+  <!-- auditing container -->
+  <rect x="250" y="100" width="480" height="180" rx="6" fill="#dae8fc" stroke="#6c8ebf"/>
+  <text x="490" y="122" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#333333">审批中 In Approval（多级节点）</text>
+  <rect x="270" y="150" width="130" height="44" rx="5" fill="#ffffff" stroke="#6c8ebf"/>
+  <text x="335" y="176" font-size="10" text-anchor="middle" fill="#333333">部门主管审批</text>
+  <rect x="420" y="150" width="130" height="44" rx="5" fill="#ffffff" stroke="#6c8ebf"/>
+  <text x="485" y="176" font-size="10" text-anchor="middle" fill="#333333">采购 / 仓库会签</text>
+  <rect x="570" y="150" width="140" height="44" rx="5" fill="#ffffff" stroke="#6c8ebf"/>
+  <text x="640" y="176" font-size="10" text-anchor="middle" fill="#333333">金额分级核准</text>
+  <g stroke="#555555" stroke-width="1.3" fill="none">
+    <path d="M400,172 L420,172" marker-end="url(#arrow)"/>
+    <path d="M550,172 L570,172" marker-end="url(#arrow)"/>
+  </g>
+  <text x="490" y="240" font-size="9" text-anchor="middle" fill="#6c8ebf">按组织 / 物料类别 / 金额路由审批节点</text>
+
+  <!-- approved / next / rejected -->
+  <rect x="790" y="140" width="120" height="50" rx="6" fill="#d5e8d4" stroke="#82b366"/>
+  <text x="850" y="161" font-size="11" text-anchor="middle" fill="#333333">已核准</text>
+  <text x="850" y="177" font-size="10" text-anchor="middle" fill="#666666">Approved</text>
+
+  <rect x="960" y="140" width="140" height="50" rx="6" fill="#ffe6cc" stroke="#d79b00"/>
+  <text x="1030" y="170" font-size="11" text-anchor="middle" fill="#333333">推进下一业务阶段</text>
+
+  <rect x="250" y="320" width="180" height="46" rx="6" fill="#f8cecc" stroke="#b85450"/>
+  <text x="340" y="348" font-size="11" text-anchor="middle" fill="#333333">驳回 → 退回修改</text>
+
+  <text x="70" y="378" font-size="9.5" fill="#666666">业务单据通过 audit_order_id 关联审批流表；后端写操作前校验单据状态，审批状态不可被页面绕过。</text>
+
+  <!-- ===== Section B: 业务流转 ===== -->
+  <rect x="40" y="410" width="1080" height="240" rx="8" fill="none" stroke="#d79b00" stroke-dasharray="6,4"/>
+  <text x="52" y="430" font-size="12" font-weight="bold" fill="#d79b00">② 审批流驱动的业务流转</text>
+
+  <g stroke="#555555" stroke-width="1.5" fill="none">
+    <path d="M200,488 L250,488" marker-end="url(#arrow)"/>
+    <path d="M380,488 L430,488" marker-end="url(#arrow)"/>
+    <path d="M560,488 L610,488" marker-end="url(#arrow)"/>
+    <path d="M740,488 L790,488" marker-end="url(#arrow)"/>
+    <path d="M920,488 L970,488" marker-end="url(#arrow)"/>
+  </g>
+  <path d="M675,516 L675,580" fill="none" stroke="#b85450" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#arrow-red)"/>
+
+  <g font-size="9" fill="#444444" paint-order="stroke" stroke="#ffffff" stroke-width="3">
+    <text x="225" y="481" text-anchor="middle">PR 审批核准</text>
+    <text x="405" y="475" text-anchor="middle">采购审批</text>
+    <text x="405" y="486" text-anchor="middle">归并生成</text>
+    <text x="585" y="481" text-anchor="middle">供应商送货</text>
+    <text x="765" y="475" text-anchor="middle">检验合格</text>
+    <text x="765" y="486" text-anchor="middle">入库</text>
+    <text x="945" y="475" text-anchor="middle">领用申请</text>
+    <text x="945" y="486" text-anchor="middle">审批核准</text>
+    <text x="682" y="552" fill="#b85450">异常阻断</text>
+  </g>
+
+  <rect x="70" y="460" width="130" height="56" rx="6" fill="#dae8fc" stroke="#6c8ebf"/>
+  <text x="135" y="484" font-size="11" font-weight="bold" text-anchor="middle" fill="#333333">PR</text>
+  <text x="135" y="500" font-size="10" text-anchor="middle" fill="#333333">请购</text>
+
+  <rect x="250" y="460" width="130" height="56" rx="6" fill="#dae8fc" stroke="#6c8ebf"/>
+  <text x="315" y="484" font-size="11" font-weight="bold" text-anchor="middle" fill="#333333">PPR</text>
+  <text x="315" y="500" font-size="10" text-anchor="middle" fill="#333333">采购准备</text>
+
+  <rect x="430" y="460" width="130" height="56" rx="6" fill="#dae8fc" stroke="#6c8ebf"/>
+  <text x="495" y="484" font-size="11" font-weight="bold" text-anchor="middle" fill="#333333">PO</text>
+  <text x="495" y="500" font-size="10" text-anchor="middle" fill="#333333">采购订单</text>
+
+  <rect x="610" y="460" width="130" height="56" rx="6" fill="#d5e8d4" stroke="#82b366"/>
+  <text x="675" y="484" font-size="11" font-weight="bold" text-anchor="middle" fill="#333333">Receiving</text>
+  <text x="675" y="500" font-size="10" text-anchor="middle" fill="#333333">验收</text>
+
+  <rect x="790" y="460" width="130" height="56" rx="6" fill="#ffe6cc" stroke="#d79b00"/>
+  <text x="855" y="484" font-size="11" font-weight="bold" text-anchor="middle" fill="#333333">OnHand</text>
+  <text x="855" y="500" font-size="10" text-anchor="middle" fill="#333333">入库</text>
+
+  <rect x="970" y="460" width="130" height="56" rx="6" fill="#ffe6cc" stroke="#d79b00"/>
+  <text x="1035" y="484" font-size="11" font-weight="bold" text-anchor="middle" fill="#333333">Issue</text>
+  <text x="1035" y="500" font-size="10" text-anchor="middle" fill="#333333">领用发料</text>
+
+  <rect x="610" y="580" width="130" height="44" rx="6" fill="#f8cecc" stroke="#b85450"/>
+  <text x="675" y="606" font-size="10" text-anchor="middle" fill="#333333">收料异常单</text>
+
+  <text x="70" y="640" font-size="9.5" fill="#666666">每个业务节点由对应审批流核准后才向下推进；收料异常单阻断后续入库流程。</text>
+</svg>

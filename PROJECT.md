@@ -29,7 +29,7 @@ CareerOS 是一套长期维护的职业操作系统（Career Operating System）
 
 **Current Milestone：**
 
-Milestone 3：ExpenseSCM Database Design 与 ER Diagram
+Milestone 4：ExpenseSCM 核心流程图
 
 ---
 
@@ -50,6 +50,7 @@ Milestone 3：ExpenseSCM Database Design 与 ER Diagram
 - [x] Architecture Diagram
 - [x] Database Design
 - [x] Database ER Diagram
+- [x] Workflow / Supply Layer / Inventory Flow / Cost Flow Diagrams
 
 ### CareerOS
 
@@ -65,7 +66,7 @@ Milestone 3：ExpenseSCM Database Design 与 ER Diagram
 
 下一阶段：
 
-绘制 ExpenseSCM 核心流程图（Workflow / Supply Layer / Inventory Flow / Cost Flow）。
+ExpenseSCM Interview Preparation（Technical Highlights / STAR / Interview Q&A / Resume Bullets）。
 
 ---
 
