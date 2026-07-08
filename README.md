@@ -2,97 +2,87 @@
 
 
 
-Hi, I'm Zhang Hewan.
+这是我的个人职业操作系统，用于系统化管理求职、简历、作品集、项目包装、面试准备、AI 辅助开发体系与职业路线规划。
 
 
 
-Enterprise Application Engineer  
+\## Career Positioning
 
-Python · Flask · Oracle · PL/SQL · EIP · Workflow · ERP Integration · AI-assisted Development
 
 
+目标方向：
 
-\## About Me
 
 
+\- Python 后端开发工程师
 
-I am an enterprise application developer focused on building internal business systems for manufacturing and corporate digitalization scenarios.
+\- ERP / EIP 系统开发工程师
 
+\- Oracle / PL/SQL 开发工程师
 
+\- 企业内部系统开发工程师
 
-My experience covers requirement analysis, database design, Python/Flask development, Oracle PL/SQL development, workflow integration, ERP data integration, testing, deployment, and long-term maintenance.
+\- 供应链 / 采购 / 库存 / 成本系统开发方向
 
 
 
-\## Core Positioning
+\## Core Strengths
 
 
 
-AI-Augmented Enterprise Application Engineer
+\- 独立完成企业级系统的需求沟通、数据库设计、后端开发、前端开发、测试上线与维护
 
+\- 熟悉 Python / Flask / Oracle / PL/SQL / SQL 优化
 
+\- 熟悉 EIP 与 Oracle ERP / EBS 接口集成
 
-I focus on turning complex business processes into stable, maintainable enterprise systems.
+\- 具备供应链、采购、库存、验收、成本核算、供应商管理等业务系统经验
 
+\- 具备从业务流程抽象为数据模型、审批流、报表与系统功能的能力
 
 
-\## Technical Skills
 
+\## Main Projects
 
 
-\- Backend: Python, Flask
 
-\- Database: Oracle, PL/SQL, SQL, Package, Stored Procedure, DB Link
+1\. 企业 ERP 费用性供应链系统
 
-\- Frontend: HTML, JavaScript, EasyUI, Vue
+2\. 集团间交易确认系统
 
-\- Enterprise Systems: EIP, Workflow, ERP Integration, SRM, SCM
+3\. ERP 供应商管理系统 SRM
 
-\- AI Tools: Claude Code, Codex, GitHub Copilot, Kimi Code
 
-\- Documentation: Requirement Documents, Design Documents, Test Reports, Release Notes
 
+\## CareerOS Modules
 
 
-\## Featured Projects
 
+| 模块 | 内容 |
 
+|---|---|
 
-\### 1. Enterprise Expense Supply Chain Management System
+| 01-resume | 黄金简历 ATS |
 
+| 02-portfolio | 作品集 |
 
+| 03-github-profile | GitHub 职业主页 |
 
-An enterprise expense supply chain system covering requisition, purchasing, receiving, inventory, usage, return, cost calculation, workflow approval, and ERP integration.
+| 04-projects | 三个核心项目深度包装 |
 
+| 05-ai-dev-system | AI 辅助开发体系 |
 
+| 06-star-interview | STAR 面试故事库 |
 
-\### 2. Supplier Management Platform
+| 07-self-introduction | 自我介绍 |
 
+| 08-interview-bank | 面试题库 |
 
+| 09-developer-playbook | 开发者工作手册 |
 
-A supplier master data management platform covering supplier creation, data change, approval workflow, ERP write-back, evaluation, audit, and performance scoring.
+| 10-prompt-library | Prompt Library |
 
+| 11-career-roadmap | 职业路线规划 |
 
-
-\### 3. Group Trading Confirmation System
-
-
-
-An intercompany trading confirmation system covering automatic pricing, bilateral confirmation, permission control, price write-back, and transaction traceability.
-
-
-
-\## AI-assisted Development
-
-
-
-I am building an AI-assisted development workflow using Claude Code, Codex, GitHub Copilot, and Kimi Code to improve productivity in requirement analysis, code generation, SQL review, testing, documentation, and maintenance.
-
-
-
-\## Repository Structure
-
-
-
-This repository is my personal Career Operating System, including resumes, portfolio, project case studies, interview preparation, AI prompts, learning notes, and career planning.
+| 12-application-tracker | Offer 投递管理 |
 
