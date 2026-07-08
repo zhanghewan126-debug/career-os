@@ -108,8 +108,8 @@ ExpenseSCM
 - ✅ 项目概述
 - ✅ 业务流程
 - ✅ 系统架构图
-- ⏳ 数据库设计
-- ⏳ ER 图
+- ✅ 数据库设计
+- ✅ ER 图
 - ⏳ Workflow 流程图
 - ⏳ Supply Layer 图
 - ⏳ 技术亮点整理

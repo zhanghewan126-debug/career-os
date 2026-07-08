@@ -1,112 +1,56 @@
-\# CareerOS Roadmap
+# CareerOS Roadmap
 
+## Phase 1（进行中）
 
+### ExpenseSCM
 
-\## Phase 1（进行中）
+- [x] README
+- [x] Business Process
+- [x] Architecture
+- [x] Database Design
+- [x] ER Diagram
+- [ ] Workflow
+- [ ] STAR
 
+---
 
+## Phase 2
 
-\### ExpenseSCM
+### SRM
 
+- 项目包装
+- Architecture
+- Database
+- STAR
 
+---
 
-\- \[x] README
+## Phase 3
 
-\- \[x] Business Process
+### GroupTrading
 
-\- \[x] Architecture
+- 项目包装
+- Architecture
+- Database
+- STAR
 
-\- \[ ] Database Design
+---
 
-\- \[ ] ER Diagram
+## Phase 4
 
-\- \[ ] Workflow
+### CareerOS
 
-\- \[ ] STAR
+- Resume
+- Portfolio
+- GitHub Profile
+- Interview Library
 
+---
 
+## Phase 5
 
-\---
+### Career Development
 
-
-
-\## Phase 2
-
-
-
-\### SRM
-
-
-
-\- 项目包装
-
-\- Architecture
-
-\- Database
-
-\- STAR
-
-
-
-\---
-
-
-
-\## Phase 3
-
-
-
-\### GroupTrading
-
-
-
-\- 项目包装
-
-\- Architecture
-
-\- Database
-
-\- STAR
-
-
-
-\---
-
-
-
-\## Phase 4
-
-
-
-CareerOS
-
-
-
-\- Resume
-
-\- Portfolio
-
-\- GitHub Profile
-
-\- Interview Library
-
-
-
-\---
-
-
-
-\## Phase 5
-
-
-
-Career Development
-
-
-
-\- Offer Tracker
-
-\- Learning Plan
-
-\- Career Planning
-
+- Offer Tracker
+- Learning Plan
+- Career Planning

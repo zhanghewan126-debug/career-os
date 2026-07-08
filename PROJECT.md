@@ -1,152 +1,78 @@
-\# CareerOS Project Dashboard
-
-
+# CareerOS Project Dashboard
 
 > Personal Career Operating System
 
+---
 
-
-\---
-
-
-
-\# 🎯 Project Vision
-
-
+## 🎯 Project Vision
 
 CareerOS 是一套长期维护的职业操作系统（Career Operating System）。
 
-
-
 目标不是仅完成一份简历，而是打造一套完整的职业品牌，包括：
 
+- 黄金简历（ATS）
+- GitHub 技术作品集
+- Portfolio
+- 企业级项目包装
+- 面试知识库
+- AI 辅助开发体系
+- Developer Playbook
+- Prompt Library
+- Offer 投递管理
+- 长期职业成长体系
 
+---
 
-\- 黄金简历（ATS）
+## 📊 Current Status
 
-\- GitHub 技术作品集
+**Status：** 🟢 Active Development
 
-\- Portfolio
+**Current Milestone：**
 
-\- 企业级项目包装
+Milestone 3：ExpenseSCM Database Design 与 ER Diagram
 
-\- 面试知识库
+---
 
-\- AI 辅助开发体系
+## 📦 Current Progress
 
-\- Developer Playbook
+### Foundation
 
-\- Prompt Library
+- [x] CareerOS Repository
+- [x] Git Configuration
+- [x] GitHub Repository
+- [x] Folder Structure
 
-\- Offer 投递管理
+### ExpenseSCM
 
-\- 长期职业成长体系
+- [x] README（项目首页）
+- [x] Project Overview
+- [x] Business Process
+- [x] Architecture Diagram
+- [x] Database Design
+- [x] Database ER Diagram
 
+### CareerOS
 
+- [ ] Resume
+- [ ] Portfolio
+- [ ] GitHub Profile
+- [ ] Interview Library
+- [ ] AI Development System
 
-\---
+---
 
-
-
-\# 📊 Current Status
-
-
-
-\*\*Status：\*\* 🟢 Active Development
-
-
-
-\*\*Current Milestone：\*\*
-
-
-
-Milestone 2：ExpenseSCM Documentation
-
-
-
-\---
-
-
-
-\# 📦 Current Progress
-
-
-
-\## Foundation
-
-
-
-\- \[x] CareerOS Repository
-
-\- \[x] Git Configuration
-
-\- \[x] GitHub Repository
-
-\- \[x] Folder Structure
-
-
-
-\## ExpenseSCM
-
-
-
-\- \[x] README（项目首页）
-
-\- \[x] Project Overview
-
-\- \[x] Business Process
-
-\- \[x] Architecture Diagram
-
-
-
-\## CareerOS
-
-
-
-\- \[ ] Resume
-
-\- \[ ] Portfolio
-
-\- \[ ] GitHub Profile
-
-\- \[ ] Interview Library
-
-\- \[ ] AI Development System
-
-
-
-\---
-
-
-
-\# 🚀 Next Action
-
-
+## 🚀 Next Action
 
 下一阶段：
 
+绘制 ExpenseSCM 核心流程图（Workflow / Supply Layer / Inventory Flow / Cost Flow）。
 
+---
 
-完成 ExpenseSCM Database Design。
-
-
-
-\---
-
-
-
-\# 📝 Notes
-
-
+## 📝 Notes
 
 坚持每完成一个 Milestone：
 
-
-
-\- Git Commit
-
-\- Git Push
-
-\- 更新 PROJECT.md
-
+- Git Commit
+- Git Push
+- 更新 PROJECT.md

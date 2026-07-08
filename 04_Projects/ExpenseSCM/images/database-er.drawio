@@ -1,0 +1,220 @@
+<mxfile host="app.diagrams.net" modified="2026-07-08T00:00:00.000Z" agent="drawio" version="24.0.0" type="device">
+  <diagram id="expensescm-database-er" name="Database ER">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1340" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="ExpenseSCM Database ER Diagram｜核心表关系图" style="text;html=1;fontSize=18;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="60" y="10" width="600" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Zone A: Procurement -->
+        <mxCell id="zoneA" value="采购链 Procurement" style="rounded=1;dashed=1;fillColor=none;strokeColor=#6c8ebf;verticalAlign=top;align=left;fontStyle=1;fontColor=#6c8ebf;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="280" height="910" as="geometry" />
+        </mxCell>
+        <!-- Zone B: Receiving -->
+        <mxCell id="zoneB" value="验收链 Receiving" style="rounded=1;dashed=1;fillColor=none;strokeColor=#82b366;verticalAlign=top;align=left;fontStyle=1;fontColor=#82b366;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="360" y="430" width="280" height="540" as="geometry" />
+        </mxCell>
+        <!-- Zone C: Inventory Core -->
+        <mxCell id="zoneC" value="库存核心 Inventory Core" style="rounded=1;dashed=1;fillColor=none;strokeColor=#d79b00;verticalAlign=top;align=left;fontStyle=1;fontColor=#d79b00;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="680" y="50" width="290" height="830" as="geometry" />
+        </mxCell>
+        <!-- Zone D: Master Data & Cost -->
+        <mxCell id="zoneD" value="主数据与成本 Master Data &amp; Cost" style="rounded=1;dashed=1;fillColor=none;strokeColor=#9673a6;verticalAlign=top;align=left;fontStyle=1;fontColor=#9673a6;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="430" width="290" height="420" as="geometry" />
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend" value="图例" style="rounded=1;fillColor=#f5f5f5;strokeColor=#666666;verticalAlign=top;align=left;fontStyle=1;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="90" width="290" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-text" value="■ 蓝：采购链　■ 绿：验收链&#10;■ 橙：库存核心　■ 紫：主数据与成本&#10;&#10;── 实线：外键 / 过账数据流&#10;--- 虚线：引用 / 追溯关系&#10;PK 主键　FK 外键" style="text;html=1;align=left;verticalAlign=top;fontSize=11;spacingLeft=8;spacingTop=2;" vertex="1" parent="legend">
+          <mxGeometry x="0" y="24" width="290" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- ===== Zone A entities ===== -->
+        <mxCell id="req" value="EXP_ITEMS_REQUISITION（请购单）" style="swimlane;fontStyle=1;fontSize=11;startSize=26;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="90" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="req-f" value="PK requisition_id&#10;requisition_number&#10;org_id&#10;FK item_id&#10;quantity&#10;audit_order_id" style="text;html=1;align=left;verticalAlign=top;fontSize=10;spacingLeft=8;spacingTop=2;" vertex="1" parent="req">
+          <mxGeometry x="0" y="26" width="240" height="104" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ppr" value="EXPENSE_PO_PREPARE_ALL（采购准备）" style="swimlane;fontStyle=1;fontSize=11;startSize=26;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="270" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ppr-f" value="PK prepare_id&#10;FK requisition_id&#10;vendor_id / vendor_site_id&#10;currency_code&#10;unit_price / tax_rate&#10;audit_order_id" style="text;html=1;align=left;verticalAlign=top;fontSize=10;spacingLeft=8;spacingTop=2;" vertex="1" parent="ppr">
+          <mxGeometry x="0" y="26" width="240" height="104" as="geometry" />
+        </mxCell>
+
+        <mxCell id="poh" value="EXP_PO_HEADERS_ALL（采购订单头）" style="swimlane;fontStyle=1;fontSize=11;startSize=26;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="450" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="poh-f" value="PK po_header_id&#10;po_number&#10;vendor_id / vendor_site_id&#10;currency_code / terms_id&#10;total_amount&#10;status" style="text;html=1;align=left;verticalAlign=top;fontSize=10;spacingLeft=8;spacingTop=2;" vertex="1" parent="poh">
+          <mxGeometry x="0" y="26" width="240" height="104" as="geometry" />
+        </mxCell>
+
+        <mxCell id="pol" value="EXP_PO_LINES_ALL（采购订单行）" style="swimlane;fontStyle=1;fontSize=11;startSize=26;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="630" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="pol-f" value="PK po_line_id&#10;FK po_header_id&#10;line_num&#10;FK item_id&#10;quantity / unit_price&#10;FK prepare_id" style="text;html=1;align=left;verticalAlign=top;fontSize=10;spacingLeft=8;spacingTop=2;" vertex="1" parent="pol">
+          <mxGeometry x="0" y="26" width="240" height="104" as="geometry" />
+        </mxCell>
+
+        <mxCell id="poll" value="EXP_PO_LINE_LOCATIONS_ALL（发运行）" style="swimlane;fontStyle=1;fontSize=11;startSize=26;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="810" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="poll-f" value="PK line_location_id&#10;FK po_line_id&#10;promised_date&#10;quantity&#10;quantity_received / accepted&#10;quantity_rejected" style="text;html=1;align=left;verticalAlign=top;fontSize=10;spacingLeft=8;spacingTop=2;" vertex="1" parent="poll">
+          <mxGeometry x="0" y="26" width="240" height="104" as="geometry" />
+        </mxCell>
+
+        <!-- ===== Zone B entities ===== -->
+        <mxCell id="rsh" value="EXP_RCV_SHIPMENT_HEADERS（验收单头）" style="swimlane;fontStyle=1;fontSize=11;startSize=26;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="470" width="240" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="rsh-f" value="PK shipment_header_id&#10;shipment_num&#10;vendor_id&#10;receipt_date&#10;status" style="text;html=1;align=left;verticalAlign=top;fontSize=10;spacingLeft=8;spacingTop=2;" vertex="1" parent="rsh">
+          <mxGeometry x="0" y="26" width="240" height="94" as="geometry" />
+        </mxCell>
+
+        <mxCell id="rsl" value="EXP_RCV_SHIPMENT_LINES（验收单行）" style="swimlane;fontStyle=1;fontSize=11;startSize=26;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="640" width="240" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="rsl-f" value="PK shipment_line_id&#10;FK shipment_header_id&#10;FK line_location_id&#10;FK item_id&#10;quantity_received&#10;sample_qty / pass_qty&#10;exception_flag" style="text;html=1;align=left;verticalAlign=top;fontSize=10;spacingLeft=8;spacingTop=2;" vertex="1" parent="rsl">
+          <mxGeometry x="0" y="26" width="240" height="114" as="geometry" />
+        </mxCell>
+
+        <mxCell id="rct" value="EXP_RCV_TRANSACTIONS（验收事务）" style="swimlane;fontStyle=1;fontSize=11;startSize=26;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="830" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="rct-f" value="PK rcv_transaction_id&#10;FK shipment_line_id&#10;transaction_type&#10;（RECEIVE / INSPECT / DELIVER / RETURN）&#10;quantity&#10;FK parent_transaction_id" style="text;html=1;align=left;verticalAlign=top;fontSize=10;spacingLeft=8;spacingTop=2;" vertex="1" parent="rct">
+          <mxGeometry x="0" y="26" width="240" height="104" as="geometry" />
+        </mxCell>
+
+        <!-- ===== Zone C entities ===== -->
+        <mxCell id="sup" value="EXP_MTL_SUPPLY（供应层）" style="swimlane;fontStyle=1;fontSize=11;startSize=26;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="90" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="sup-f" value="PK supply_id&#10;FK item_id / org_id&#10;supply_type_code（PR…RETURN 7 层）&#10;supply_source_type / id&#10;quantity" style="text;html=1;align=left;verticalAlign=top;fontSize=10;spacingLeft=8;spacingTop=2;" vertex="1" parent="sup">
+          <mxGeometry x="0" y="26" width="250" height="94" as="geometry" />
+        </mxCell>
+
+        <mxCell id="dem" value="EXP_MTL_DEMAND（需求层）" style="swimlane;fontStyle=1;fontSize=11;startSize=26;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="270" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dem-f" value="PK demand_id&#10;FK item_id / org_id&#10;demand_source_type / id&#10;quantity / need_by_date&#10;status" style="text;html=1;align=left;verticalAlign=top;fontSize=10;spacingLeft=8;spacingTop=2;" vertex="1" parent="dem">
+          <mxGeometry x="0" y="26" width="250" height="94" as="geometry" />
+        </mxCell>
+
+        <mxCell id="mmt" value="EXP_MTL_MATERIAL_TRANS（库存事务）" style="swimlane;fontStyle=1;fontSize=11;startSize=26;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="470" width="250" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="mmt-f" value="PK transaction_id&#10;FK item_id / org_id&#10;transaction_type_id&#10;transaction_quantity（±）&#10;source_type / source_id（幂等键）&#10;transaction_cost&#10;period_name" style="text;html=1;align=left;verticalAlign=top;fontSize=10;spacingLeft=8;spacingTop=2;" vertex="1" parent="mmt">
+          <mxGeometry x="0" y="26" width="250" height="114" as="geometry" />
+        </mxCell>
+
+        <mxCell id="oqd" value="EXP_MTL_ONHAND_QTY_DETAIL（在库明细）" style="swimlane;fontStyle=1;fontSize=11;startSize=26;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="680" width="250" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="oqd-f" value="PK onhand_id&#10;FK item_id / org_id&#10;subinventory_code&#10;receipt_date（FIFO 依据）&#10;original / remain_quantity&#10;FK source_transaction_id" style="text;html=1;align=left;verticalAlign=top;fontSize=10;spacingLeft=8;spacingTop=2;" vertex="1" parent="oqd">
+          <mxGeometry x="0" y="26" width="250" height="104" as="geometry" />
+        </mxCell>
+
+        <!-- ===== Zone D entities ===== -->
+        <mxCell id="items" value="EXP_SYSTEM_ITEMS（物料主档）" style="swimlane;fontStyle=1;fontSize=11;startSize=26;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="470" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="items-f" value="PK item_id（EBS DB Link 同步）&#10;item_number&#10;description&#10;primary_uom_code&#10;hazard_flag" style="text;html=1;align=left;verticalAlign=top;fontSize=10;spacingLeft=8;spacingTop=2;" vertex="1" parent="items">
+          <mxGeometry x="0" y="26" width="250" height="94" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ipc" value="ITEM_PERIOD_COST（期间成本）" style="swimlane;fontStyle=1;fontSize=11;startSize=26;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="660" width="250" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="ipc-f" value="PK period_cost_id&#10;FK item_id / org_id&#10;period_name&#10;begin_quantity / begin_amount&#10;receipt / return / issue 数量金额&#10;unit_cost（月度加权平均）&#10;end_quantity / end_amount → 结转&#10;closed_flag" style="text;html=1;align=left;verticalAlign=top;fontSize=10;spacingLeft=8;spacingTop=2;" vertex="1" parent="ipc">
+          <mxGeometry x="0" y="26" width="250" height="139" as="geometry" />
+        </mxCell>
+
+        <!-- Note under items -->
+        <mxCell id="note-items" value="item_id 被所有业务表引用（图中仅示意主要引用）" style="text;html=1;fontSize=9;fontColor=#9673a6;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="592" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="note-sup" value="PR / PPR / PO / RCV 各业务节点核准过账时，&#10;数量在对应供应层之间流转" style="text;html=1;fontSize=9;fontColor=#d79b00;align=left;" vertex="1" parent="1">
+          <mxGeometry x="700" y="410" width="250" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ===== Edges ===== -->
+        <mxCell id="e1" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="req" target="ppr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="归并生成 PO" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="ppr" target="poh">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="poh" target="pol">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="pol" target="poll">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="prepare_id 追溯" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;dashed=1;fontSize=9;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="ppr" target="pol">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="335" />
+              <mxPoint x="340" y="695" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="收货核销" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=10;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="poll" target="rsl">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="875" />
+              <mxPoint x="340" y="710" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="rsh" target="rsl">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="1 : N（事务链）" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="rsl" target="rct">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="DELIVER / RETURN 过账" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=10;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="rct" target="mmt">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="890" />
+              <mxPoint x="660" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="创建 / FIFO 扣减批次" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="mmt" target="oqd">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="供应层流转" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=10;exitX=1;exitY=0.25;entryX=1;entryY=0.5;" edge="1" parent="1" source="mmt" target="sup">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="960" y="505" />
+              <mxPoint x="960" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="供需匹配 · 可用量计算" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;startArrow=open;dashed=1;fontSize=9;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="sup" target="dem">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="按期间汇总入库 / 验退金额" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=9;exitX=1;exitY=0.75;entryX=0;entryY=0.5;" edge="1" parent="1" source="mmt" target="ipc">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="990" y="575" />
+              <mxPoint x="990" y="742" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" value="item_id" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;dashed=1;fontSize=9;exitX=0;exitY=0.5;entryX=1;entryY=0.43;" edge="1" parent="1" source="items" target="mmt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
