@@ -1,78 +1,218 @@
-\# Enterprise Expense Supply Chain Management System
+\# ExpenseSCM｜企业 ERP 费用性供应链管理系统
 
 
 
-\## Project Overview
+\## 1. 项目定位
 
 
 
-This project is an enterprise expense supply chain management system built for internal business process digitalization.
+ExpenseSCM 是一套企业内部 ERP 费用性供应链管理系统，覆盖费用性物料从请购、采购、验收、入库、领用、退回到成本核算的完整业务链路。
 
 
 
-It covers requisition, purchasing, receiving, inventory, usage, return, abnormal receiving, cost calculation, workflow approval, and ERP integration.
+本项目重点展示我在企业级业务系统开发中的系统分析、数据库设计、Python 后端开发、Oracle PL/SQL 事务处理、审批流集成、库存管理和成本核算能力。
 
 
 
-\## My Role
+\## 2. 项目背景
 
 
 
-Independent Developer / Enterprise Application Developer
+公司内部费用性物料种类多、流程长，原有 Excel、邮件和人工线下沟通方式难以支撑统一管理，容易出现以下问题：
 
 
 
-Responsible for requirement analysis, system design, database design, backend development, frontend development, Oracle PL/SQL development, testing, deployment, and maintenance.
+\- 请购、采购、验收、领用流程分散，状态不可追踪
+
+\- 库存数量依赖人工维护，容易出现账实不一致
+
+\- 费用性物料成本缺乏统一核算口径
+
+\- 审批流程复杂，不同组织、不同物料类型审批规则不同
+
+\- 采购、仓库、财务之间缺少统一的数据闭环
 
 
 
-\## Technology Stack
+因此建设 ExpenseSCM 系统，将费用性供应链流程线上化、流程化、数据化。
 
 
 
-\- Python
-
-\- Flask
-
-\- Oracle
-
-\- PL/SQL
-
-\- DB Link
-
-\- EasyUI
-
-\- Vue
-
-\- Workflow Engine
-
-\- ERP Integration
+\## 3. 我的角色
 
 
 
-\## Key Highlights
+我在该项目中承担核心开发与系统设计职责，参与并负责：
 
 
 
-\- Full-process digitalization from requisition to financial reconciliation
+\- 需求分析与业务流程梳理
 
-\- Monthly weighted average cost calculation
+\- 后端业务模块开发
 
-\- Supply Layer inventory tracking model
+\- Oracle 数据库表结构设计
 
-\- PL/SQL Package for complex business transactions
+\- PL/SQL Package 复杂事务开发
 
-\- Multi-level workflow approval
+\- 审批工作流集成
 
-\- ERP master data integration
+\- 库存事务与 Supply Layer 设计
 
-\- AI-assisted development workflow
+\- 月度加权平均成本核算逻辑实现
 
-
-
-\## Status
+\- 系统测试、上线与维护
 
 
 
-In progress.
+\## 4. 技术栈
+
+
+
+\- 后端：Python / Flask
+
+\- 数据库：Oracle / PL/SQL / SQL
+
+\- 前端：EasyUI / Jinja2 / Vue 3
+
+\- 数据处理：Pandas / Excel 导入导出
+
+\- 集成：Oracle EBS / DB Link / MongoDB 附件
+
+\- 工作流：企业内部审批流引擎
+
+
+
+\## 5. 核心业务模块
+
+
+
+\- 请购管理
+
+\- 采购准备
+
+\- 采购审批
+
+\- 采购单生成
+
+\- 供应商发送
+
+\- 验收管理
+
+\- 收料异常
+
+\- 验退管理
+
+\- 领用管理
+
+\- 领料退回
+
+\- 库存异动
+
+\- 在库查询
+
+\- 成本核算
+
+\- 期初期末查询
+
+
+
+\## 6. 核心技术亮点
+
+
+
+\### 6.1 月度加权平均成本核算
+
+
+
+系统实现费用性物料的月度加权平均成本核算：
+
+
+
+```text
+
+当期单位成本 =
+
+（期初成本 × 期初数量 + 本期入库金额 - 本期验退金额）
+
+/
+
+（期初数量 + 本期入库数量 - 本期验退数量）
+
+
+
+领用出库按当期加权平均成本计价，月末成本滚动结转到下一期间，支撑财务期初、入库、验退、领料、期末六栏对账。
+
+
+
+6.2 Supply Layer 七层供需追踪
+
+
+
+设计 Supply Layer 机制，按 PR、PPR、PO、RECEIVING、ACCEPT、ONHAND、RETURN 七种状态追踪物料在供应链中的位置，实现从请购到在库的全链路可视化。
+
+
+
+6.3 库存快照 + 增量计算
+
+
+
+通过 ONHAND 快照与库存事务增量流水结合，计算实时库存，避免全量扫描历史事务，提高库存查询性能。
+
+
+
+6.4 PL/SQL Package 封装复杂事务
+
+
+
+将验收入库、领用扣减、验退退厂等涉及多表联动的复杂业务逻辑封装到 PL/SQL Package 中，通过事务控制保证数据一致性。
+
+
+
+6.5 幂等性库存事务控制
+
+
+
+以 source\_type、source\_id、transaction\_type\_id 作为幂等键，结合 SELECT FOR UPDATE 行锁和双重检查，避免重复提交导致库存重复扣减。
+
+
+
+6.6 可配置审批工作流
+
+
+
+基于 audit\_order\_id 状态机和 workflow\_detail 表驱动审批流，支持多级审批、代理审批、批量审批和不同组织差异化流程配置。
+
+
+
+7\. 项目价值
+
+将费用性物料管理从线下 Excel / 邮件模式转为系统化管理
+
+打通请购、采购、验收、库存、领用、成本核算全链路
+
+提升库存数量准确性和业务可追溯性
+
+支撑财务成本核算和月结对账
+
+降低人工维护、重复采购和流程卡点风险
+
+8\. 适合展示的能力
+
+企业级 ERP 系统开发能力
+
+Python 后端开发能力
+
+Oracle SQL / PLSQL 能力
+
+复杂业务建模能力
+
+库存与供应链业务理解能力
+
+成本核算与财务对账理解能力
+
+工作流与审批系统集成能力
+
+
+
+
 
