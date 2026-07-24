@@ -4,6 +4,17 @@ All notable changes to CareerOS will be documented here.
 
 ---
 
+## v0.8.0 - 2026-07-24
+
+### Added
+
+- 初始化 SRM（企业供应商关系管理系统）项目目录与 Milestone 1：Project Foundation
+  - README.md、PROJECT.md
+  - docs/01_Project_Overview.md、02_Business_Process.md、03_System_Architecture.md
+  - images/architecture.drawio / architecture.svg（分层架构图，色彩方案与 ExpenseSCM 保持一致）
+
+---
+
 ## v0.7.0 - 2026-07-08
 
 ### Added

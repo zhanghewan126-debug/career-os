@@ -22,10 +22,12 @@
 
 ### SRM
 
-- 项目包装
-- Architecture
-- Database
-- STAR
+- [x] README
+- [x] Business Process
+- [x] Architecture
+- [ ] Database Design
+- [ ] ER Diagram
+- [ ] STAR
 
 ---
 

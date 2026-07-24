@@ -29,7 +29,7 @@ CareerOS 是一套长期维护的职业操作系统（Career Operating System）
 
 **Current Milestone：**
 
-Milestone 6：ExpenseSCM Portfolio 整合与收尾
+SRM Milestone 1：Project Foundation
 
 ---
 
@@ -54,6 +54,18 @@ Milestone 6：ExpenseSCM Portfolio 整合与收尾
 - [x] Technical Highlights / STAR / Interview Q&A / Resume Bullets
 - [~] Screenshots（结构与脱敏清单已就绪，待上传真实截图）
 
+### SRM
+
+- [x] README（项目首页）
+- [x] Project Overview
+- [x] Business Process
+- [x] System Architecture
+- [x] Architecture Diagram
+- [ ] Database Design
+- [ ] Database ER Diagram
+- [ ] 核心流程图
+- [ ] Technical Highlights / STAR / Interview Q&A / Resume Bullets
+
 ### CareerOS
 
 - [ ] Resume
@@ -68,7 +80,7 @@ Milestone 6：ExpenseSCM Portfolio 整合与收尾
 
 下一阶段：
 
-上传 ExpenseSCM 脱敏后的系统截图；随后启动 SRM 或 GroupTrading 项目包装。
+SRM Database Design（核心业务实体梳理、核心表设计、ER Diagram）；同时等待上传 ExpenseSCM 脱敏后的系统截图。
 
 ---
 
