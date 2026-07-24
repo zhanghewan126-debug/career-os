@@ -73,8 +73,9 @@
 | [项目概述](docs/01_Project_Overview.md) | 项目背景、建设目标及职责 |
 | [业务流程](docs/02_Business_Process.md) | 供应商全生命周期业务流程 |
 | [系统架构](docs/03_System_Architecture.md) | 系统分层架构设计 |
+| [数据库设计](docs/04_Database_Design.md) | 核心数据模型与表结构 |
 
-后续文档（数据库设计、技术亮点、面试案例等）按 Milestone 逐步推进，见 [PROJECT.md](PROJECT.md)。
+后续文档（技术亮点、面试案例等）按 Milestone 逐步推进，见 [PROJECT.md](PROJECT.md)。
 
 ---
 
@@ -89,7 +90,8 @@ SRM
 ├── docs                     项目文档
 │   ├── 01_Project_Overview.md
 │   ├── 02_Business_Process.md
-│   └── 03_System_Architecture.md
+│   ├── 03_System_Architecture.md
+│   └── 04_Database_Design.md
 │
 ├── images                   架构图、流程图、ER 图
 │
@@ -101,7 +103,7 @@ SRM
 # 🚀 当前建设进度
 
 - ✅ 项目概述 / 业务流程 / 系统架构
-- ⏳ 数据库设计 / ER 图
+- ✅ 数据库设计 / ER 图
 - ⏳ 核心流程图（评鉴流程 / 绩效评分统计流程 / EIP-ERP 数据回写流程）
 - ⏳ 技术亮点 / STAR 面试案例 / 面试问答 / 简历项目描述
 

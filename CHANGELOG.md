@@ -4,6 +4,17 @@ All notable changes to CareerOS will be documented here.
 
 ---
 
+## v0.9.0 - 2026-07-24
+
+### Added
+
+- 完成 SRM Database Design 文档（docs/04_Database_Design.md）与 ER Diagram
+  - 14 个核心实体：建档/变更申请单、供应商主档、地址/SITE/联络人/付款资料/合约/体系文件、评鉴单/评鉴人员/稽核计划、绩效评分/权重配置
+  - 重点章节：EIP-ERP 双轨数据模型（erp_/eip_ 前缀机制 + Merge 回写）、工作流节点钩子驱动自动化、绩效评分统计动态 SQL 引擎
+  - images/database-er.drawio / database-er.svg（4 分区 ER 图，采购/明细/评鉴/评分四大分区）
+
+---
+
 ## v0.8.0 - 2026-07-24
 
 ### Added

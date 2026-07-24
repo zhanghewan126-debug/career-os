@@ -51,8 +51,8 @@
 
 ### Phase 2：Documentation
 
-- [ ] Database Design
-- [ ] Database ER Diagram
+- [x] Database Design
+- [x] Database ER Diagram
 - [ ] 核心流程图（评鉴流程 / 绩效评分统计流程 / EIP-ERP 数据回写流程）
 
 ### Phase 3：Interview Preparation
@@ -76,27 +76,25 @@
 
 ## 🗂 Current Milestone
 
-**Milestone 1：Project Foundation**
+**Milestone 2：Database Design**
 
 当前任务：
 
-- [x] README（docs/README.md）
-- [x] Project Overview（docs/01_Project_Overview.md）
-- [x] Business Process（docs/02_Business_Process.md）
-- [x] System Architecture（docs/03_System_Architecture.md）
-- [x] Architecture Diagram（images/architecture.drawio / architecture.svg）
+- [x] 核心业务实体梳理（14 个核心实体，见 docs/04_Database_Design.md §2）
+- [x] 核心表设计（含 EIP-ERP 双轨中间表、AP_SUPPLIER_MANAGE_PKG 相关钩子过程说明）
+- [x] Database ER Diagram（images/database-er.drawio / database-er.svg）
 
 ---
 
 ## 🚀 Next Milestone
 
-**Milestone 2：Database Design**
+**Milestone 3：核心流程图**
 
 完成：
 
-- 核心业务实体梳理（供应商主档、地址/SITE/联络人/付款资料明细、评鉴单、稽核计划、绩效评分表等）
-- 核心表设计（重点：AP_SUPPLIER_MANAGE_PKG 相关表、EIP-ERP 双轨中间表）
-- Database ER Diagram
+- 评鉴流程图（多级签核状态机）
+- 绩效评分统计流程图（动态 SQL 引擎、多维度加权、跨库整合）
+- EIP-ERP 数据回写流程图（erp_/eip_ 双轨机制、Merge 回写）
 
 ---
 
@@ -120,6 +118,7 @@
 |---------|-------------|
 | v0.1 | 创建 SRM 项目目录结构 |
 | v0.2 | 完成 Project Overview / Business Process / System Architecture / Architecture Diagram |
+| v0.3 | 完成 Database Design 文档与 ER Diagram |
 
 ---
 
@@ -127,7 +126,6 @@
 
 后续计划包括：
 
-- 完善数据库设计文档与 ER 图
 - 补充核心业务流程图（评鉴流程、绩效评分统计流程、EIP-ERP 数据回写流程）
 - 完成 STAR 面试案例、Interview Q&A、Resume Bullets
 - 整合至 CareerOS Portfolio

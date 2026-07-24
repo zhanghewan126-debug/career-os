@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1220" height="1030" viewBox="0 0 1220 1030" font-family="'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#555555"/>
+    </marker>
+    <marker id="open" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1,1 L9,5 L1,9" fill="none" stroke="#777777" stroke-width="1.3"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1220" height="1030" fill="#ffffff"/>
+
+  <text x="40" y="34" font-size="18" font-weight="bold" fill="#333333">SRM Database ER Diagram｜核心表关系图</text>
+
+  <!-- Zones -->
+  <rect x="40" y="50" width="940" height="180" rx="8" fill="none" stroke="#6c8ebf" stroke-dasharray="6,4"/>
+  <text x="52" y="70" font-size="12" font-weight="bold" fill="#6c8ebf">建档与主档 Request &amp; Master</text>
+
+  <rect x="40" y="260" width="940" height="290" rx="8" fill="none" stroke="#82b366" stroke-dasharray="6,4"/>
+  <text x="52" y="280" font-size="12" font-weight="bold" fill="#82b366">供应商明细 Vendor Details</text>
+
+  <rect x="40" y="580" width="940" height="180" rx="8" fill="none" stroke="#d79b00" stroke-dasharray="6,4"/>
+  <text x="52" y="600" font-size="12" font-weight="bold" fill="#d79b00">评鉴与稽核 Evaluation &amp; Audit</text>
+
+  <rect x="40" y="790" width="940" height="180" rx="8" fill="none" stroke="#9673a6" stroke-dasharray="6,4"/>
+  <text x="52" y="810" font-size="12" font-weight="bold" fill="#9673a6">绩效评分 Performance Scoring</text>
+
+  <!-- Legend -->
+  <rect x="1000" y="50" width="180" height="180" rx="6" fill="#f5f5f5" stroke="#666666"/>
+  <text x="1012" y="68" font-size="12" font-weight="bold" fill="#333333">图例</text>
+  <rect x="1012" y="78" width="12" height="12" fill="#dae8fc" stroke="#6c8ebf"/>
+  <text x="1030" y="88" font-size="10.5" fill="#333333">建档与主档</text>
+  <rect x="1012" y="98" width="12" height="12" fill="#d5e8d4" stroke="#82b366"/>
+  <text x="1030" y="108" font-size="10.5" fill="#333333">供应商明细</text>
+  <rect x="1012" y="118" width="12" height="12" fill="#ffe6cc" stroke="#d79b00"/>
+  <text x="1030" y="128" font-size="10.5" fill="#333333">评鉴与稽核</text>
+  <rect x="1012" y="138" width="12" height="12" fill="#e1d5e7" stroke="#9673a6"/>
+  <text x="1030" y="148" font-size="10.5" fill="#333333">绩效评分</text>
+  <line x1="1012" y1="165" x2="1044" y2="165" stroke="#555555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="1052" y="169" font-size="10" fill="#333333">签核回写</text>
+  <line x1="1012" y1="185" x2="1044" y2="185" stroke="#777777" stroke-width="1.3" stroke-dasharray="5,4" marker-end="url(#open)"/>
+  <text x="1052" y="189" font-size="10" fill="#333333">自动触发</text>
+  <text x="1012" y="208" font-size="9.5" fill="#666666">PK 主键 FK 外键</text>
+
+  <!-- ===== Edges ===== -->
+  <g stroke="#555555" stroke-width="1.5" fill="none">
+    <path d="M340,150 L360,150" marker-end="url(#arrow)"/>
+    <path d="M640,150 L680,150" marker-end="url(#arrow)"/>
+    <path d="M340,355 L360,355" marker-end="url(#arrow)"/>
+    <path d="M500,410 L500,420 L200,420 L200,430" marker-end="url(#arrow)"/>
+    <path d="M734,210 L734,245 L414,245 L414,300" marker-end="url(#arrow)"/>
+    <path d="M918,210 L918,245 L598,245 L598,430" marker-end="url(#arrow)"/>
+    <path d="M340,680 L360,680" marker-end="url(#arrow)"/>
+    <path d="M640,680 L660,680" marker-end="url(#arrow)"/>
+    <path d="M736,210 L736,770 L136,770 L136,830" marker-end="url(#arrow)"/>
+    <path d="M480,890 L440,890" marker-end="url(#arrow)"/>
+  </g>
+  <g stroke="#777777" stroke-width="1.3" fill="none" stroke-dasharray="5,4">
+    <path d="M468,210 L468,260 L200,260 L200,300" marker-end="url(#open)"/>
+    <path d="M640,485 L660,485" marker-end="url(#open)"/>
+    <path d="M130,210 L130,620" marker-end="url(#open)"/>
+  </g>
+
+  <!-- Edge labels -->
+  <g font-size="9" fill="#444444" paint-order="stroke" stroke="#ffffff" stroke-width="3">
+    <text x="348" y="144" text-anchor="middle">1 : N</text>
+    <text x="616" y="140" text-anchor="middle">建档创建</text>
+    <text x="616" y="151" text-anchor="middle">变更关联</text>
+    <text x="348" y="349" text-anchor="middle">引用地址</text>
+    <text x="210" y="414" text-anchor="middle">1 : N</text>
+    <text x="424" y="270" text-anchor="middle">1 : N</text>
+    <text x="608" y="270" text-anchor="middle">按 Vendor 汇总加载</text>
+    <text x="348" y="674" text-anchor="middle">1 : N</text>
+    <text x="616" y="674" text-anchor="middle">关联稽核</text>
+    <text x="300" y="764" text-anchor="middle">汇总多源数据</text>
+    <text x="460" y="884" text-anchor="middle">引用权重计算</text>
+    <text x="210" y="288" text-anchor="middle">签核通过后</text>
+    <text x="210" y="299" text-anchor="middle">路由回写</text>
+    <text x="650" y="479" text-anchor="middle">评鉴前置自动创建</text>
+    <text transform="rotate(-90 118 415)" x="118" y="415" text-anchor="middle">签核通过后自动创建评鉴单</text>
+  </g>
+
+  <!-- ===== Zone A entities ===== -->
+  <g>
+    <rect x="60" y="90" width="280" height="120" rx="6" fill="#dae8fc" stroke="#6c8ebf"/>
+    <line x1="60" y1="116" x2="340" y2="116" stroke="#6c8ebf"/>
+    <text x="200" y="107" font-size="10.5" font-weight="bold" text-anchor="middle" fill="#333333">SRM_VENDOR_REQUEST_HEADERS（申请单头）</text>
+    <text x="68" y="132" font-size="9.5" fill="#333333">
+      <tspan x="68" font-weight="bold">PK request_id</tspan>
+      <tspan x="68" dy="15">request_type（建档/变更）</tspan>
+      <tspan x="68" dy="15">erp_vendor_id</tspan>
+      <tspan x="68" dy="15">org_id / vendor_type</tspan>
+      <tspan x="68" dy="15">audit_order_id</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect x="360" y="90" width="280" height="120" rx="6" fill="#dae8fc" stroke="#6c8ebf"/>
+    <line x1="360" y1="116" x2="640" y2="116" stroke="#6c8ebf"/>
+    <text x="500" y="107" font-size="10.5" font-weight="bold" text-anchor="middle" fill="#333333">SRM_VENDOR_REQUEST_LINES（申请明细）</text>
+    <text x="368" y="132" font-size="9.5" fill="#333333">
+      <tspan x="368" font-weight="bold">PK line_id</tspan>
+      <tspan x="368" dy="15">FK request_id</tspan>
+      <tspan x="368" dy="15">detail_type（地址/SITE/联络人/</tspan>
+      <tspan x="368" dy="15">付款资料/合约）</tspan>
+      <tspan x="368" dy="15">action_type / target_id</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect x="680" y="90" width="280" height="120" rx="6" fill="#dae8fc" stroke="#6c8ebf"/>
+    <line x1="680" y1="116" x2="960" y2="116" stroke="#6c8ebf"/>
+    <text x="820" y="107" font-size="10.5" font-weight="bold" text-anchor="middle" fill="#333333">SRM_VENDORS（供应商主档）</text>
+    <text x="688" y="132" font-size="9.5" fill="#333333">
+      <tspan x="688" font-weight="bold">PK vendor_id</tspan>
+      <tspan x="688" dy="15">erp_vendor_id（回写 EBS）</tspan>
+      <tspan x="688" dy="15">vendor_name_cn/tw/en</tspan>
+      <tspan x="688" dy="15">unified_social_credit_code</tspan>
+      <tspan x="688" dy="15">vendor_type / org_id</tspan>
+    </text>
+  </g>
+
+  <!-- ===== Zone B entities ===== -->
+  <g>
+    <rect x="60" y="300" width="280" height="110" rx="6" fill="#d5e8d4" stroke="#82b366"/>
+    <line x1="60" y1="326" x2="340" y2="326" stroke="#82b366"/>
+    <text x="200" y="317" font-size="10.5" font-weight="bold" text-anchor="middle" fill="#333333">SRM_VENDOR_ADDRESSES（地址）</text>
+    <text x="68" y="342" font-size="9.5" fill="#333333">
+      <tspan x="68" font-weight="bold">PK address_id（erp_/eip_ 前缀）</tspan>
+      <tspan x="68" dy="15">FK vendor_id</tspan>
+      <tspan x="68" dy="15">address_type</tspan>
+      <tspan x="68" dy="15">source_flag</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect x="360" y="300" width="280" height="110" rx="6" fill="#d5e8d4" stroke="#82b366"/>
+    <line x1="360" y1="326" x2="640" y2="326" stroke="#82b366"/>
+    <text x="500" y="317" font-size="10.5" font-weight="bold" text-anchor="middle" fill="#333333">SRM_VENDOR_SITES（SITE）</text>
+    <text x="368" y="342" font-size="9.5" fill="#333333">
+      <tspan x="368" font-weight="bold">PK site_id（erp_/eip_ 前缀）</tspan>
+      <tspan x="368" dy="15">FK vendor_id / address_id</tspan>
+      <tspan x="368" dy="15">org_id / site_code</tspan>
+      <tspan x="368" dy="15">bill_to / ship_to / legal_flag</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect x="660" y="300" width="280" height="110" rx="6" fill="#d5e8d4" stroke="#82b366"/>
+    <line x1="660" y1="326" x2="940" y2="326" stroke="#82b366"/>
+    <text x="800" y="317" font-size="10.5" font-weight="bold" text-anchor="middle" fill="#333333">SRM_VENDOR_CONTACTS（联络人）</text>
+    <text x="668" y="342" font-size="9.5" fill="#333333">
+      <tspan x="668" font-weight="bold">PK contact_id</tspan>
+      <tspan x="668" dy="15">FK vendor_id</tspan>
+      <tspan x="668" dy="15">contact_name / phone / email</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect x="60" y="430" width="280" height="110" rx="6" fill="#d5e8d4" stroke="#82b366"/>
+    <line x1="60" y1="456" x2="340" y2="456" stroke="#82b366"/>
+    <text x="200" y="447" font-size="10" font-weight="bold" text-anchor="middle" fill="#333333">SRM_VENDOR_PAYMENT_TERMS（付款资料）</text>
+    <text x="68" y="472" font-size="9.5" fill="#333333">
+      <tspan x="68" font-weight="bold">PK payment_id</tspan>
+      <tspan x="68" dy="15">FK site_id</tspan>
+      <tspan x="68" dy="15">currency_code / payment_terms_code</tspan>
+      <tspan x="68" dy="15">tax_rate / bank_code / lang_code</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect x="360" y="430" width="280" height="110" rx="6" fill="#d5e8d4" stroke="#82b366"/>
+    <line x1="360" y1="456" x2="640" y2="456" stroke="#82b366"/>
+    <text x="500" y="447" font-size="10" font-weight="bold" text-anchor="middle" fill="#333333">SRM_VENDOR_CONTRACTS（合约附档）</text>
+    <text x="368" y="472" font-size="9.5" fill="#333333">
+      <tspan x="368" font-weight="bold">PK contract_id</tspan>
+      <tspan x="368" dy="15">FK vendor_id</tspan>
+      <tspan x="368" dy="15">attach_file_id</tspan>
+      <tspan x="368" dy="15">legal_review_status / return_reason</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect x="660" y="430" width="280" height="110" rx="6" fill="#d5e8d4" stroke="#82b366"/>
+    <line x1="660" y1="456" x2="940" y2="456" stroke="#82b366"/>
+    <text x="800" y="447" font-size="10" font-weight="bold" text-anchor="middle" fill="#333333">SRM_VENDOR_QUALITY_DOCS（体系文件）</text>
+    <text x="668" y="472" font-size="9.5" fill="#333333">
+      <tspan x="668" font-weight="bold">PK doc_id</tspan>
+      <tspan x="668" dy="15">FK vendor_id / site_id</tspan>
+      <tspan x="668" dy="15">doc_type（ISO 9001/13485/16949）</tspan>
+      <tspan x="668" dy="15">valid_from / valid_to</tspan>
+    </text>
+  </g>
+
+  <!-- ===== Zone C entities ===== -->
+  <g>
+    <rect x="60" y="620" width="280" height="120" rx="6" fill="#ffe6cc" stroke="#d79b00"/>
+    <line x1="60" y1="646" x2="340" y2="646" stroke="#d79b00"/>
+    <text x="200" y="637" font-size="10.5" font-weight="bold" text-anchor="middle" fill="#333333">SRM_VENDOR_EVALUATIONS（评鉴单）</text>
+    <text x="68" y="662" font-size="9.5" fill="#333333">
+      <tspan x="68" font-weight="bold">PK evaluation_id</tspan>
+      <tspan x="68" dy="15">FK vendor_id / source_request_id</tspan>
+      <tspan x="68" dy="15">evaluation_category / nature</tspan>
+      <tspan x="68" dy="15">audit_order_id / status</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect x="360" y="620" width="280" height="120" rx="6" fill="#ffe6cc" stroke="#d79b00"/>
+    <line x1="360" y1="646" x2="640" y2="646" stroke="#d79b00"/>
+    <text x="500" y="637" font-size="10" font-weight="bold" text-anchor="middle" fill="#333333">SRM_EVALUATION_ASSIGNEES（评鉴人员）</text>
+    <text x="368" y="662" font-size="9.5" fill="#333333">
+      <tspan x="368" font-weight="bold">PK assignee_id</tspan>
+      <tspan x="368" dy="15">FK evaluation_id</tspan>
+      <tspan x="368" dy="15">role_type（采购/品保/SQE）</tspan>
+      <tspan x="368" dy="15">employee_id / required_flag</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect x="660" y="620" width="280" height="120" rx="6" fill="#ffe6cc" stroke="#d79b00"/>
+    <line x1="660" y1="646" x2="940" y2="646" stroke="#d79b00"/>
+    <text x="800" y="637" font-size="10.5" font-weight="bold" text-anchor="middle" fill="#333333">SRM_AUDIT_PLANS（稽核计划）</text>
+    <text x="668" y="662" font-size="9.5" fill="#333333">
+      <tspan x="668" font-weight="bold">PK plan_id</tspan>
+      <tspan x="668" dy="15">FK vendor_id</tspan>
+      <tspan x="668" dy="15">plan_date / audit_type</tspan>
+      <tspan x="668" dy="15">import_batch_id / result_status</tspan>
+    </text>
+  </g>
+
+  <!-- ===== Zone D entities ===== -->
+  <g>
+    <rect x="60" y="830" width="380" height="120" rx="6" fill="#e1d5e7" stroke="#9673a6"/>
+    <line x1="60" y1="856" x2="440" y2="856" stroke="#9673a6"/>
+    <text x="250" y="847" font-size="10.5" font-weight="bold" text-anchor="middle" fill="#333333">SRM_VENDOR_PERFORMANCE_SCORES（绩效评分）</text>
+    <text x="68" y="872" font-size="9.5" fill="#333333">
+      <tspan x="68" font-weight="bold">PK score_id</tspan>
+      <tspan x="68" dy="15">FK vendor_id / org_id</tspan>
+      <tspan x="68" dy="15">period</tspan>
+      <tspan x="68" dy="15">delivery/quality/price/service_score</tspan>
+      <tspan x="68" dy="15">weighted_total_score / grade</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect x="480" y="830" width="380" height="120" rx="6" fill="#e1d5e7" stroke="#9673a6"/>
+    <line x1="480" y1="856" x2="860" y2="856" stroke="#9673a6"/>
+    <text x="670" y="847" font-size="10.5" font-weight="bold" text-anchor="middle" fill="#333333">SRM_SCORE_WEIGHT_CONFIG（评分权重配置）</text>
+    <text x="488" y="872" font-size="9.5" fill="#333333">
+      <tspan x="488" font-weight="bold">PK config_id</tspan>
+      <tspan x="488" dy="15">FK org_id</tspan>
+      <tspan x="488" dy="15">delivery/quality/price/service_weight</tspan>
+      <tspan x="488" dy="15">grade_a/b/c_threshold</tspan>
+      <tspan x="488" dy="15">effective_from</tspan>
+    </text>
+  </g>
+
+</svg>

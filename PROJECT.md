@@ -29,7 +29,7 @@ CareerOS 是一套长期维护的职业操作系统（Career Operating System）
 
 **Current Milestone：**
 
-SRM Milestone 1：Project Foundation
+SRM Milestone 2：Database Design
 
 ---
 
@@ -61,8 +61,8 @@ SRM Milestone 1：Project Foundation
 - [x] Business Process
 - [x] System Architecture
 - [x] Architecture Diagram
-- [ ] Database Design
-- [ ] Database ER Diagram
+- [x] Database Design
+- [x] Database ER Diagram
 - [ ] 核心流程图
 - [ ] Technical Highlights / STAR / Interview Q&A / Resume Bullets
 
@@ -80,7 +80,7 @@ SRM Milestone 1：Project Foundation
 
 下一阶段：
 
-SRM Database Design（核心业务实体梳理、核心表设计、ER Diagram）；同时等待上传 ExpenseSCM 脱敏后的系统截图。
+SRM 核心流程图（评鉴流程、绩效评分统计流程、EIP-ERP 数据回写流程）；同时等待上传 ExpenseSCM 脱敏后的系统截图。
 
 ---
 

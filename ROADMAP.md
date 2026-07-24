@@ -25,8 +25,8 @@
 - [x] README
 - [x] Business Process
 - [x] Architecture
-- [ ] Database Design
-- [ ] ER Diagram
+- [x] Database Design
+- [x] ER Diagram
 - [ ] STAR
 
 ---

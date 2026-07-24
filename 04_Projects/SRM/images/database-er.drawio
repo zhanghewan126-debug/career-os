@@ -1,0 +1,213 @@
+<mxfile host="app.diagrams.net" modified="2026-07-24T00:00:00.000Z" agent="drawio" version="24.0.0" type="device">
+  <diagram id="srm-database-er" name="Database ER">
+    <mxGraphModel dx="1300" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1220" pageHeight="1030" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="SRM Database ER Diagram｜核心表关系图" style="text;html=1;fontSize=18;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="10" width="600" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Zones -->
+        <mxCell id="zoneA" value="建档与主档 Request &amp; Master" style="rounded=1;dashed=1;fillColor=none;strokeColor=#6c8ebf;verticalAlign=top;align=left;fontStyle=1;fontColor=#6c8ebf;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="940" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="zoneB" value="供应商明细 Vendor Details" style="rounded=1;dashed=1;fillColor=none;strokeColor=#82b366;verticalAlign=top;align=left;fontStyle=1;fontColor=#82b366;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="260" width="940" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="zoneC" value="评鉴与稽核 Evaluation &amp; Audit" style="rounded=1;dashed=1;fillColor=none;strokeColor=#d79b00;verticalAlign=top;align=left;fontStyle=1;fontColor=#d79b00;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="580" width="940" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="zoneD" value="绩效评分 Performance Scoring" style="rounded=1;dashed=1;fillColor=none;strokeColor=#9673a6;verticalAlign=top;align=left;fontStyle=1;fontColor=#9673a6;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="790" width="940" height="180" as="geometry" />
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend" value="图例" style="rounded=1;fillColor=#f5f5f5;strokeColor=#666666;verticalAlign=top;align=left;fontStyle=1;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="50" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-text" value="■ 蓝：建档与主档&#10;■ 绿：供应商明细&#10;■ 橙：评鉴与稽核&#10;■ 紫：绩效评分&#10;&#10;── 实线：外键 / 签核回写&#10;--- 虚线：自动触发 / 引用&#10;PK 主键　FK 外键" style="text;html=1;align=left;verticalAlign=top;fontSize=10.5;spacingLeft=8;spacingTop=2;" vertex="1" parent="legend">
+          <mxGeometry x="0" y="24" width="180" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- Zone A entities -->
+        <mxCell id="req_h" value="SRM_VENDOR_REQUEST_HEADERS（申请单头）" style="swimlane;fontStyle=1;fontSize=10.5;startSize=26;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="90" width="280" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="req_h-f" value="PK request_id&#10;request_type（建档/变更）&#10;erp_vendor_id&#10;org_id / vendor_type&#10;audit_order_id" style="text;html=1;align=left;verticalAlign=top;fontSize=9.5;spacingLeft=8;spacingTop=2;" vertex="1" parent="req_h">
+          <mxGeometry x="0" y="26" width="280" height="94" as="geometry" />
+        </mxCell>
+
+        <mxCell id="req_l" value="SRM_VENDOR_REQUEST_LINES（申请明细）" style="swimlane;fontStyle=1;fontSize=10.5;startSize=26;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="90" width="280" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="req_l-f" value="PK line_id&#10;FK request_id&#10;detail_type（地址/SITE/联络人/&#10;付款资料/合约）&#10;action_type / target_id" style="text;html=1;align=left;verticalAlign=top;fontSize=9.5;spacingLeft=8;spacingTop=2;" vertex="1" parent="req_l">
+          <mxGeometry x="0" y="26" width="280" height="94" as="geometry" />
+        </mxCell>
+
+        <mxCell id="vendors" value="SRM_VENDORS（供应商主档）" style="swimlane;fontStyle=1;fontSize=10.5;startSize=26;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="90" width="280" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="vendors-f" value="PK vendor_id&#10;erp_vendor_id（回写 EBS）&#10;vendor_name_cn/tw/en&#10;unified_social_credit_code&#10;vendor_type / org_id" style="text;html=1;align=left;verticalAlign=top;fontSize=9.5;spacingLeft=8;spacingTop=2;" vertex="1" parent="vendors">
+          <mxGeometry x="0" y="26" width="280" height="94" as="geometry" />
+        </mxCell>
+
+        <!-- Zone B entities -->
+        <mxCell id="addr" value="SRM_VENDOR_ADDRESSES（地址）" style="swimlane;fontStyle=1;fontSize=10.5;startSize=26;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="300" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="addr-f" value="PK address_id（erp_/eip_ 前缀）&#10;FK vendor_id&#10;address_type&#10;source_flag" style="text;html=1;align=left;verticalAlign=top;fontSize=9.5;spacingLeft=8;spacingTop=2;" vertex="1" parent="addr">
+          <mxGeometry x="0" y="26" width="280" height="84" as="geometry" />
+        </mxCell>
+
+        <mxCell id="sites" value="SRM_VENDOR_SITES（SITE）" style="swimlane;fontStyle=1;fontSize=10.5;startSize=26;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="300" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="sites-f" value="PK site_id（erp_/eip_ 前缀）&#10;FK vendor_id / address_id&#10;org_id / site_code&#10;bill_to / ship_to / legal_flag" style="text;html=1;align=left;verticalAlign=top;fontSize=9.5;spacingLeft=8;spacingTop=2;" vertex="1" parent="sites">
+          <mxGeometry x="0" y="26" width="280" height="84" as="geometry" />
+        </mxCell>
+
+        <mxCell id="contacts" value="SRM_VENDOR_CONTACTS（联络人）" style="swimlane;fontStyle=1;fontSize=10.5;startSize=26;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="300" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="contacts-f" value="PK contact_id&#10;FK vendor_id&#10;contact_name / phone / email" style="text;html=1;align=left;verticalAlign=top;fontSize=9.5;spacingLeft=8;spacingTop=2;" vertex="1" parent="contacts">
+          <mxGeometry x="0" y="26" width="280" height="84" as="geometry" />
+        </mxCell>
+
+        <mxCell id="pay" value="SRM_VENDOR_PAYMENT_TERMS（付款资料）" style="swimlane;fontStyle=1;fontSize=10.5;startSize=26;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="430" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="pay-f" value="PK payment_id&#10;FK site_id&#10;currency_code / payment_terms_code&#10;tax_rate / bank_code / lang_code" style="text;html=1;align=left;verticalAlign=top;fontSize=9.5;spacingLeft=8;spacingTop=2;" vertex="1" parent="pay">
+          <mxGeometry x="0" y="26" width="280" height="84" as="geometry" />
+        </mxCell>
+
+        <mxCell id="contracts" value="SRM_VENDOR_CONTRACTS（合约附档）" style="swimlane;fontStyle=1;fontSize=10.5;startSize=26;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="430" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="contracts-f" value="PK contract_id&#10;FK vendor_id&#10;attach_file_id&#10;legal_review_status / return_reason" style="text;html=1;align=left;verticalAlign=top;fontSize=9.5;spacingLeft=8;spacingTop=2;" vertex="1" parent="contracts">
+          <mxGeometry x="0" y="26" width="280" height="84" as="geometry" />
+        </mxCell>
+
+        <mxCell id="quality" value="SRM_VENDOR_QUALITY_DOCS（体系文件）" style="swimlane;fontStyle=1;fontSize=10.5;startSize=26;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="430" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="quality-f" value="PK doc_id&#10;FK vendor_id / site_id&#10;doc_type（ISO 9001/13485/16949）&#10;valid_from / valid_to" style="text;html=1;align=left;verticalAlign=top;fontSize=9.5;spacingLeft=8;spacingTop=2;" vertex="1" parent="quality">
+          <mxGeometry x="0" y="26" width="280" height="84" as="geometry" />
+        </mxCell>
+
+        <!-- Zone C entities -->
+        <mxCell id="eval" value="SRM_VENDOR_EVALUATIONS（评鉴单）" style="swimlane;fontStyle=1;fontSize=10.5;startSize=26;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="620" width="280" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="eval-f" value="PK evaluation_id&#10;FK vendor_id / source_request_id&#10;evaluation_category / nature&#10;audit_order_id / status" style="text;html=1;align=left;verticalAlign=top;fontSize=9.5;spacingLeft=8;spacingTop=2;" vertex="1" parent="eval">
+          <mxGeometry x="0" y="26" width="280" height="94" as="geometry" />
+        </mxCell>
+
+        <mxCell id="assignee" value="SRM_EVALUATION_ASSIGNEES（评鉴人员）" style="swimlane;fontStyle=1;fontSize=10.5;startSize=26;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="620" width="280" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="assignee-f" value="PK assignee_id&#10;FK evaluation_id&#10;role_type（采购/品保/SQE）&#10;employee_id / required_flag" style="text;html=1;align=left;verticalAlign=top;fontSize=9.5;spacingLeft=8;spacingTop=2;" vertex="1" parent="assignee">
+          <mxGeometry x="0" y="26" width="280" height="94" as="geometry" />
+        </mxCell>
+
+        <mxCell id="audit" value="SRM_AUDIT_PLANS（稽核计划）" style="swimlane;fontStyle=1;fontSize=10.5;startSize=26;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="620" width="280" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="audit-f" value="PK plan_id&#10;FK vendor_id&#10;plan_date / audit_type&#10;import_batch_id / result_status" style="text;html=1;align=left;verticalAlign=top;fontSize=9.5;spacingLeft=8;spacingTop=2;" vertex="1" parent="audit">
+          <mxGeometry x="0" y="26" width="280" height="94" as="geometry" />
+        </mxCell>
+
+        <!-- Zone D entities -->
+        <mxCell id="score" value="SRM_VENDOR_PERFORMANCE_SCORES（绩效评分）" style="swimlane;fontStyle=1;fontSize=10.5;startSize=26;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="830" width="380" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="score-f" value="PK score_id&#10;FK vendor_id / org_id&#10;period&#10;delivery/quality/price/service_score&#10;weighted_total_score / grade" style="text;html=1;align=left;verticalAlign=top;fontSize=9.5;spacingLeft=8;spacingTop=2;" vertex="1" parent="score">
+          <mxGeometry x="0" y="26" width="380" height="94" as="geometry" />
+        </mxCell>
+
+        <mxCell id="weight" value="SRM_SCORE_WEIGHT_CONFIG（评分权重配置）" style="swimlane;fontStyle=1;fontSize=10.5;startSize=26;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="830" width="380" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="weight-f" value="PK config_id&#10;FK org_id&#10;delivery/quality/price/service_weight&#10;grade_a/b/c_threshold&#10;effective_from" style="text;html=1;align=left;verticalAlign=top;fontSize=9.5;spacingLeft=8;spacingTop=2;" vertex="1" parent="weight">
+          <mxGeometry x="0" y="26" width="380" height="94" as="geometry" />
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="e1" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=9;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="req_h" target="req_l">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="建档创建 / 变更关联" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=9;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="req_l" target="vendors">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="签核通过后路由回写" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;dashed=1;fontSize=9;exitX=0.3;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="req_l" target="addr">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="260" />
+              <mxPoint x="200" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=9;exitX=0.15;exitY=1;entryX=0.15;entryY=0;" edge="1" parent="1" source="vendors" target="sites">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="734" y="245" />
+              <mxPoint x="414" y="245" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="引用地址" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=9;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="addr" target="sites">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=9;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="sites" target="pay">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="按 Vendor 汇总加载" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=9;exitX=0.85;exitY=1;entryX=0.85;entryY=0;" edge="1" parent="1" source="vendors" target="contracts">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="918" y="245" />
+              <mxPoint x="618" y="245" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="评鉴前置自动创建" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;dashed=1;fontSize=9;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="contracts" target="quality">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="签核通过后自动创建评鉴单" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;dashed=1;fontSize=9;exitX=0.25;exitY=1;entryX=0.25;entryY=0;" edge="1" parent="1" source="req_h" target="eval">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="130" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=9;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="eval" target="assignee">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="关联稽核" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=9;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="assignee" target="audit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="汇总多源数据" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=9;exitX=0.2;exitY=1;entryX=0.2;entryY=0;" edge="1" parent="1" source="vendors" target="score">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="756" y="770" />
+              <mxPoint x="136" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" value="引用权重计算" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=9;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="weight" target="score">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="920" y="890" />
+              <mxPoint x="500" y="890" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
