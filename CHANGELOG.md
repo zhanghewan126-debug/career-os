@@ -4,6 +4,23 @@ All notable changes to CareerOS will be documented here.
 
 ---
 
+## v0.7.0 - 2026-07-08
+
+### Added
+
+- 搭建 03_Portfolio 纯链接型索引结构：新增 Portfolio 首页 README 及 ExpenseSCM 的 CaseStudy / Architecture / ERD / Diagrams / Screenshots 五个分类导航页，全部指向 04_Projects/ExpenseSCM 原始文件，不重复存储内容
+- 搭建 ExpenseSCM 系统截图目录结构（assets/screenshots/README.md）：命名规范、脱敏检查清单、建议拍摄清单，等待真实截图上传
+
+---
+
+## v0.6.0 - 2026-07-08
+
+### Changed
+
+- 核实并填充 ExpenseSCM Resume Bullets 中的量化数据占位符：业务模块数（13）、核心业务表数（25+）沿用既有文档数据；库存差异改善、财务月结耗时因无法核实具体数字，统一改为定性表达
+
+---
+
 ## v0.5.0 - 2026-07-08
 
 ### Changed

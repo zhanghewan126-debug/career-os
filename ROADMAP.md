@@ -13,6 +13,8 @@
 - [x] STAR
 - [x] Interview Q&A
 - [x] Resume Bullets
+- [x] Portfolio Integration
+- [ ] Screenshots（结构已就绪，待上传）
 
 ---
 

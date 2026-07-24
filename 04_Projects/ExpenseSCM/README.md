@@ -135,8 +135,8 @@ ExpenseSCM
 - ✅ 数据库设计 / ER 图
 - ✅ Workflow / Supply Layer / Inventory Flow / Cost Flow 四张核心流程图
 - ✅ 技术亮点 / STAR 面试案例 / 面试问答 / 简历项目描述
-- ⏳ 系统截图（脱敏）
-- ⏳ 整合至 CareerOS Portfolio
+- ✅ 整合至 [CareerOS Portfolio](../../03_Portfolio/README.md)
+- ⏳ 系统截图（脱敏，[目录结构与清单](assets/screenshots/README.md)已就绪，待上传真实截图）
 
 ---
 

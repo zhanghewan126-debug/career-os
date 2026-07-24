@@ -59,7 +59,7 @@
 - [x] Supply Layer Diagram
 - [x] Inventory Flow Diagram
 - [x] Cost Flow Diagram
-- [ ] README（GitHub 首页优化）
+- [x] README（GitHub 首页优化）
 
 ### Phase 3：Interview Preparation
 
@@ -82,27 +82,21 @@
 
 ## 🗂 Current Milestone
 
-**Milestone 5：Interview Preparation**
+**Milestone 6：Portfolio 整合与收尾**
 
 当前任务：
 
-- [x] Technical Highlights（docs/05_Technical_Highlights.md）
-- [x] STAR Interview（docs/06_STAR_Interview.md）
-- [x] Interview Q&A（docs/07_Interview_QA.md）
-- [x] Resume Bullets（docs/08_Resume_Bullets.md）
-- [x] 优化 README（GitHub 首页：技术栈徽章、核心图纸速览、文档分组）
+- [x] Resume Bullets 中量化数据核实填充（业务模块/表数量用既有数据填入，其余无把握项改为定性描述）
+- [x] 整合至 CareerOS Portfolio（纯链接型，见 [03_Portfolio](../../03_Portfolio/README.md)）
+- [~] 系统截图（脱敏）——命名规范、脱敏检查清单、建议拍摄清单已就绪（见 [assets/screenshots/README.md](assets/screenshots/README.md)），等待真实截图上传
 
 ---
 
 ## 🚀 Next Milestone
 
-**Milestone 6：Portfolio 整合与收尾**
+**Milestone 7：待定**
 
-完成：
-
-- Resume Bullets 中量化数据核实填充
-- 系统截图（脱敏）
-- 整合至 CareerOS Portfolio
+Portfolio 整合完成后，等待真实截图上传补齐 Milestone 6 最后一项；后续推进 SRM 或 GroupTrading 项目包装。
 
 ---
 
@@ -132,6 +126,8 @@
 | v0.6 | 完成 Workflow / Supply Layer / Inventory Flow / Cost Flow 四张核心流程图 |
 | v0.7 | 完成 Interview Preparation（Technical Highlights / STAR / Interview Q&A / Resume Bullets） |
 | v0.8 | 优化 README 首页（技术栈徽章、核心图纸速览、文档分组） |
+| v0.9 | Resume Bullets 量化数据核实：模块/表数量用既有数据填入，无把握项改为定性表达 |
+| v0.10 | 整合至 CareerOS Portfolio（纯链接型）；搭建系统截图目录结构与脱敏清单 |
 
 ---
 
@@ -139,9 +135,6 @@
 
 后续计划包括：
 
-- 补充核心业务流程图
-- 增加系统截图（脱敏）
-- 完成 STAR 面试案例
-- 完善 Interview Q&A
-- 完成 Resume Bullets
-- 整合至 CareerOS Portfolio
+- 上传脱敏后的系统截图，补齐 Milestone 6
+- 视投递岗位需要，微调 Resume Bullets 侧重点
+- 推进 SRM / GroupTrading 项目包装
