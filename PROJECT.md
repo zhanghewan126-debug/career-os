@@ -29,7 +29,7 @@ CareerOS 是一套长期维护的职业操作系统（Career Operating System）
 
 **Current Milestone：**
 
-Milestone 4：ExpenseSCM 核心流程图
+Milestone 5：ExpenseSCM Interview Preparation
 
 ---
 
@@ -51,6 +51,7 @@ Milestone 4：ExpenseSCM 核心流程图
 - [x] Database Design
 - [x] Database ER Diagram
 - [x] Workflow / Supply Layer / Inventory Flow / Cost Flow Diagrams
+- [x] Technical Highlights / STAR / Interview Q&A / Resume Bullets
 
 ### CareerOS
 
@@ -66,7 +67,7 @@ Milestone 4：ExpenseSCM 核心流程图
 
 下一阶段：
 
-ExpenseSCM Interview Preparation（Technical Highlights / STAR / Interview Q&A / Resume Bullets）。
+ExpenseSCM README 首页优化，核实 Resume Bullets 中的量化数据，随后整合进 CareerOS Portfolio。
 
 ---
 

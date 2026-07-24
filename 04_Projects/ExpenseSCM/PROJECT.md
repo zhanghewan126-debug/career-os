@@ -63,10 +63,10 @@
 
 ### Phase 3：Interview Preparation
 
-- [ ] Technical Highlights
-- [ ] STAR Interview
-- [ ] Interview Q&A
-- [ ] Resume Bullets
+- [x] Technical Highlights
+- [x] STAR Interview
+- [x] Interview Q&A
+- [x] Resume Bullets
 
 ---
 
@@ -82,28 +82,27 @@
 
 ## 🗂 Current Milestone
 
-**Milestone 4：核心流程图**
+**Milestone 5：Interview Preparation**
 
 当前任务：
 
-- [x] Workflow Diagram（workflow.drawio / workflow.svg）
-- [x] Supply Layer Diagram（supply-layer.drawio / supply-layer.svg）
-- [x] Inventory Flow Diagram（inventory-flow.drawio / inventory-flow.svg）
-- [x] Cost Flow Diagram（cost-flow.drawio / cost-flow.svg）
-- [ ] 优化 README
+- [x] Technical Highlights（docs/05_Technical_Highlights.md）
+- [x] STAR Interview（docs/06_STAR_Interview.md）
+- [x] Interview Q&A（docs/07_Interview_QA.md）
+- [x] Resume Bullets（docs/08_Resume_Bullets.md）
+- [x] 优化 README（GitHub 首页：技术栈徽章、核心图纸速览、文档分组）
 
 ---
 
 ## 🚀 Next Milestone
 
-**Milestone 5：Interview Preparation**
+**Milestone 6：Portfolio 整合与收尾**
 
 完成：
 
-- Technical Highlights
-- STAR Interview
-- Interview Q&A
-- Resume Bullets
+- Resume Bullets 中量化数据核实填充
+- 系统截图（脱敏）
+- 整合至 CareerOS Portfolio
 
 ---
 
@@ -131,6 +130,8 @@
 | v0.4 | 完成 System Architecture 与 Architecture Diagram |
 | v0.5 | 完成 Database Design 文档与 ER Diagram |
 | v0.6 | 完成 Workflow / Supply Layer / Inventory Flow / Cost Flow 四张核心流程图 |
+| v0.7 | 完成 Interview Preparation（Technical Highlights / STAR / Interview Q&A / Resume Bullets） |
+| v0.8 | 优化 README 首页（技术栈徽章、核心图纸速览、文档分组） |
 
 ---
 

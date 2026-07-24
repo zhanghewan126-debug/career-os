@@ -2,6 +2,12 @@
 
 > 一个覆盖请购、采购、验收、库存、领用、退料、成本核算全过程的企业级 ERP 费用性供应链管理系统。
 
+![Python](https://img.shields.io/badge/Python-Flask-3776AB?logo=python&logoColor=white)
+![Oracle](https://img.shields.io/badge/Oracle-PL%2FSQL-F80000?logo=oracle&logoColor=white)
+![EBS](https://img.shields.io/badge/Integration-Oracle%20EBS-red)
+![MongoDB](https://img.shields.io/badge/MongoDB-Attachments-47A248?logo=mongodb&logoColor=white)
+![Status](https://img.shields.io/badge/status-active%20development-brightgreen)
+
 ---
 
 # 🏗 系统架构
@@ -63,7 +69,22 @@ ExpenseSCM 是企业内部 ERP 费用性供应链管理系统。
 
 ---
 
+# 🗂 核心图纸速览
+
+| 图纸 | 说明 |
+|------|------|
+| [系统架构图](images/architecture.svg) | 分层架构、模块划分、数据流向 |
+| [数据库 ER 图](images/database-er.svg) | 14 张核心表关系、采购/验收/库存/成本四大分区 |
+| [Workflow 审批流](images/workflow.svg) | audit_order_id 状态机与审批驱动的业务流转 |
+| [Supply Layer 供需模型](images/supply-layer.svg) | 七层供应状态与可用量计算公式 |
+| [Inventory Flow 库存事务](images/inventory-flow.svg) | 四类库存事务、PL/SQL Package 与三表协同 |
+| [Cost Flow 成本核算](images/cost-flow.svg) | 月度加权平均公式与月结流程 |
+
+---
+
 # 📚 项目文档
+
+**核心技术文档**
 
 | 文档 | 内容 |
 |------|------|
@@ -71,7 +92,12 @@ ExpenseSCM 是企业内部 ERP 费用性供应链管理系统。
 | [业务流程](docs/02_Business_Process.md) | 费用性供应链完整业务流程 |
 | [系统架构](docs/03_System_Architecture.md) | 系统分层架构设计 |
 | [数据库设计](docs/04_Database_Design.md) | 核心数据模型与表结构 |
-| [技术亮点](docs/05_Technical_Highlights.md) | 核心技术实现 |
+
+**面试与作品集深潜**
+
+| 文档 | 内容 |
+|------|------|
+| [技术亮点](docs/05_Technical_Highlights.md) | 核心技术难点与解决方案 |
 | [STAR 面试案例](docs/06_STAR_Interview.md) | STAR 面试故事整理 |
 | [面试问答](docs/07_Interview_QA.md) | 高频技术与业务问题 |
 | [简历项目描述](docs/08_Resume_Bullets.md) | 可直接用于简历的项目描述 |
@@ -105,18 +131,12 @@ ExpenseSCM
 
 # 🚀 当前建设进度
 
-- ✅ 项目概述
-- ✅ 业务流程
-- ✅ 系统架构图
-- ✅ 数据库设计
-- ✅ ER 图
-- ✅ Workflow 流程图
-- ✅ Supply Layer 图
-- ✅ Inventory Flow 图
-- ✅ Cost Flow 图
-- ⏳ 技术亮点整理
-- ⏳ STAR 面试案例
-- ⏳ 面试问答
+- ✅ 项目概述 / 业务流程 / 系统架构
+- ✅ 数据库设计 / ER 图
+- ✅ Workflow / Supply Layer / Inventory Flow / Cost Flow 四张核心流程图
+- ✅ 技术亮点 / STAR 面试案例 / 面试问答 / 简历项目描述
+- ⏳ 系统截图（脱敏）
+- ⏳ 整合至 CareerOS Portfolio
 
 ---
 

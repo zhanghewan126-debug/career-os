@@ -10,7 +10,9 @@
 - [x] Database Design
 - [x] ER Diagram
 - [x] Workflow
-- [ ] STAR
+- [x] STAR
+- [x] Interview Q&A
+- [x] Resume Bullets
 
 ---
 
